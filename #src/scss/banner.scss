@@ -1,0 +1,138 @@
+.banner {
+    background-image: url(../img/banner.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: $cmain;
+
+    &__main {
+        padding: 9.188em 0 4.313em;
+    }
+
+    &__top {
+        font-size: 16px;
+        line-height: 60px;
+        letter-spacing: 0.03em;
+        font-weight: 600;
+        opacity: 0.75;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 60px;
+        padding: 0 0 2.063em;
+        max-width: 89.42%;
+        white-space: pre-line;
+       /*  position: relative;
+        &::before {
+            content: '\2033';
+            position: absolute;
+            left: -10%;
+        }
+        &::after {
+            content: '\2033';
+            position: absolute;
+        } */
+    };
+
+
+    &__adress{
+        @extend %flex-row-center;
+        background-color: #fff;
+        border-radius: 5px;
+        opacity: 0.8;
+        height: min-content;
+        padding: 14px 16px 12px;
+
+        img {
+            margin-right: 11px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 19px;
+            color: #0A3FB4;
+        }
+    }
+
+    &__map {
+        @extend %flex-row-center;
+        margin: 0 auto;
+    }
+
+    &__down {
+        @extend %flex-row-sb;
+        align-items: center;
+    }
+}
+
+.bc-white {
+    background-image: none;
+}
+
+.director {
+    @extend %flex-row-center;
+
+    img {
+        margin-right: 27px;
+    }
+
+    &__text {
+        @include flex('center', 'center');
+        max-width: 253px;
+        line-height: 30px;
+        color: #051945;
+        white-space: pre-line;
+
+        span {
+            font-weight: 600;
+            color: $cmain;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .banner {
+        &__main {
+            padding: 6.000em 0 3.938em;
+        }
+
+        &__top {
+            font-size: calc(9.8px + (7 + 7 * 0.7) * ((100vw - 320px) / 768));
+            line-height: calc(20px + (38 + 38 * 0.7) * ((100vw - 320px) / 768));
+        }
+
+        &__title {
+            font-size: calc(21px + (22 + 22 * 0.7) * ((100vw - 320px) / 768));
+            line-height: calc(30px + (25 + 25 * 0.7) * ((100vw - 320px) / 768));
+            max-width: 100%;
+        }
+
+        &__down {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__adress {
+            margin-top: 18px;
+            padding: 12px 32px 11px 15px ;
+            p{
+                font-size: calc(11px + (5 + 5 * 0.7) * ((100vw - 320px) / 768));
+                line-height: calc(17px + (2 + 2 * 0.7) * ((100vw - 320px) / 768));
+            }
+            
+        }
+    }
+
+    .director {
+        &__text {
+            font-size: calc(12px + (2 + 2 * 0.7) * ((100vw - 320px) / 768));
+            line-height: calc(24px + (6 + 6 * 0.7) * ((100vw - 320px) / 768));
+            span {
+                display: block;
+            }
+        }
+    }
+}

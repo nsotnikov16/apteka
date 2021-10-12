@@ -1,0 +1,89 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@mixin flex($jc, $ai) {
+	display: flex;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+$cmain: #084A7A;
+$green: #1FC18F; 
+
+%uppercase {
+	text-transform: uppercase;
+};
+
+%flex-row-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+%flex-column-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+%flex-row-sb {
+	display: flex;
+	justify-content: space-between;
+	align-items: space-between;
+}
+
+%flex-row-sb-c {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+%flex-row-c {
+	display: flex;
+	align-items: center;
+}
+
+%flex-column-start {
+	display: flex;
+	flex-direction: column;
+}
+
+.link-to {
+	@extend %flex-row-sb-c;
+	justify-content: flex-start;
+	img {
+		margin-right: 7px;
+	}
+
+	&__span {
+		color: #0a3fb4;
+	}
+}
+
+.title {
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 36px;
+	color: #004b80;
+}
+
+
+@import "fonts";
+
+@import "normalize";
+
+@import "before"; // До галпа
+
+@import "banner";
+
+@import "target";
+
+@import "events";

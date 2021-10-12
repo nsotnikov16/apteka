@@ -1,0 +1,19 @@
+.main-review {
+    background: #f7fafd;
+    padding: 96px 0 75px;
+
+    &__block {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    &__right {
+        p {
+            max-width: 403px;
+            margin-bottom: 21px;
+            font-size: 18px;
+            line-height: 28px;
+            color: #051945;
+        }
+    }
+}

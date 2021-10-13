@@ -81,6 +81,13 @@ function init() {
 });
 }
 ;
+const selectBtn = document.querySelector('.select__btn');
+const selectExpand = document.querySelector('.select__expand');
+
+selectBtn.addEventListener('click', () => {
+    selectBtn.classList.toggle('select__btn_open');
+    selectExpand.classList.toggle('select__expand_open')
+});
 
 // Двухуровневое меню
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')

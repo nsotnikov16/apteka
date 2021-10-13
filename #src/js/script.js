@@ -1,5 +1,6 @@
 @@include('swiper.js');
 @@include('yandex-map.js');
+@@include('chooseCity.js');
 
 // Двухуровневое меню
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')

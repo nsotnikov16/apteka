@@ -82,6 +82,13 @@ $green: #1fc18f;
 	white-space: pre-line;
 }
 
+h3.title {
+	font-size: 18px;
+	line-height: 22px;
+	text-transform: uppercase;
+	color: #084a7a;
+}
+
 .review-btn {
 	border: 4px solid #0a3fb4;
 	box-sizing: border-box;
@@ -98,7 +105,21 @@ $green: #1fc18f;
 	@extend %uppercase;
 }
 
+.page__title {
+	font-weight: 600;
+	font-size: 36px;
+	line-height: 43px;
+	color: #084a7a;
+	padding: 38px 0 32px;
+}
 
+.page__title_white {
+	color: #fff;
+}
+
+.background-blue {
+	background-color: #084a7a;
+}
 
 @import "fonts";
 
@@ -119,3 +140,9 @@ $green: #1fc18f;
 @import "map";
 
 @import "footer";
+
+@import "breadcrumbs";
+
+@import "choose-city";
+
+@import "pharmacies";

@@ -42,7 +42,7 @@
       width: 100%;
       top: 100%;
       border-bottom: 1px solid #cedbe4;
-      /* z-index: -9999; */
+      z-index: -9999;
     }
   }
 
@@ -62,7 +62,7 @@
     padding: 16px 45px 15px 38px;
     /* z-index:9999; */
     /* border-bottom: 1px solid #cedbe4; */
-    border-bottom: 1px solid #cedbe4;
+    /* border-bottom: 1px solid #cedbe4; */
 
     &.label--active {
       color: #051945;
@@ -73,12 +73,12 @@
       &::after {
         content: '';
         top: 100%;
-        height: 1%;
+        height: 2%;
         right: 0;
         bottom: 0;
         left: 0;
         position: absolute;
-        
+        z-index: 9999;
         background: #fff;
       }
     }

@@ -34,7 +34,7 @@
     &:hover {
       .news__item {
         position: relative;
-        &::after {
+        &:not(.news__item_dif)::after {
           position: absolute;
           content: "";
           top: 100%;
@@ -102,6 +102,10 @@
       line-height: 16px;
       letter-spacing: 0.02em;
       color: rgba(5, 25, 69, 0.5);
+    }
+
+    &.news__item_dif {
+      border: none;
     }
   }
 

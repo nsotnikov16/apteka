@@ -1,11 +1,36 @@
-<div class="breadcrumbs">
-    <div class="page__container">
-        <div class="container">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item"><a href="/" class="breadcrumbs__link" href="/">Главная</a></li>
-              <li class="breadcrumbs__item"><a href="/pharmacies.html" class="breadcrumbs__current">Аптеки</a></li>
-            </ul>
-            <h2 class="page__title page__title_white">Адреса аптек</h2>
-          </div>
+<div class="page__container">
+  <div class="container">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="/" class="breadcrumbs__link" href="/">Главная</a>
+        </li>
+        <li class="breadcrumbs__item">
+          <a href="/pharmacies.html" class="breadcrumbs__current">Аптеки</a>
+        </li>
+      </ul>
     </div>
+    <h2 class="page__title page__title_white">Адреса аптек</h2>
   </div>
+</div>
+
+
+<script>
+    const breadcrumbs = document.querySelector('.breadcrumbs')
+    const breadcrumbsCurrent = breadcrumbs.querySelector('.breadcrumbs__current')
+    const pageTitle = document.querySelector('.page__title')
+    const loc = window.location.pathname;
+
+    const editText = (text) => {
+        pageTitle.textContent = text
+        breadcrumbsCurrent.textContent = text
+    };
+
+    if(loc !== '/pharmacies.html') {
+        pageTitle.classList.remove('page__title_white')
+        breadcrumbs.classList.add('breadcrumbs_white')
+    }
+    
+    loc === '/news.html' ? editText('Новости') : ''
+
+</script>

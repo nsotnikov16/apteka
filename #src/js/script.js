@@ -1,6 +1,8 @@
 @@include('swiper.js');
 @@include('yandex-map.js');
 @@include('chooseCity.js');
+@@include('calendar.js');
+@@include('tabs.js');
 
 // Двухуровневое меню
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')
@@ -26,9 +28,9 @@ menuBtn.addEventListener('click', () => {
 
 // Поиск
 
-const inputSearch = document.querySelector('.search input')
-const searchClose = document.querySelector('.search__close')
-const formSearch = document.querySelector('.search')
+const inputSearch = document.querySelector('.header__search.search input')
+const searchClose = document.querySelector('.header__search .search__close')
+const formSearch = document.querySelector('.header__search.search')
 
 inputSearch.addEventListener('input', (evt) => evt.target.value ? evt.target.parentNode.classList.add('input-value') : evt.target.parentNode.classList.remove('input-value'))
 searchClose.addEventListener('click', () => {
@@ -36,11 +38,11 @@ searchClose.addEventListener('click', () => {
     formSearch.reset();
 })
 
-const appendSearch = () => $('.search-and-phone').append($('.search'))
-const searchInHeader = () => $('.search').insertAfter($('.logo_header'))
+const appendSearch = () => $('.search-and-phone').append($('.header__search.search'))
+const searchInHeader = () => $('.header__search.search').insertAfter($('.logo_header'))
 const logicSearch = () => {
-        $('.search-img').click(function() {
-            $('.search').addClass('open')
+        $('.header__search .search-img').click(function() {
+            $('.header__search.search').addClass('open')
         })
 }
 const functional = () => {
@@ -55,3 +57,12 @@ const searchMin = () => {appendSearch(); logicSearch(); functional()}
 window.innerWidth <= 1200 ? searchMin() : functional()
 
 //document.addEventListener('click', (evt) => (evt.target !== formSearch) && (!formSearch.classList.contains('open')) ? formSearch.classList.remove('open') : '')
+
+//Календарь
+/* let date = new Date()
+console.log(date)
+console.log(date.getFullYear())
+console.log(date.getMonth() + 1)
+console.log(date.getDate()) */
+
+

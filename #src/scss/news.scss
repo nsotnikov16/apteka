@@ -3,19 +3,71 @@
     border-top: 1px solid rgba(206, 219, 228, 0.75);
 
     &__grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
+        /* display: grid;
+        grid-template-columns: 2fr 1fr 1fr; */
+        column-count: 2;
+
+    }
+
+    &__grid-a {
+       /*  display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 100vh; */
+        .news__block:last-child {
+            margin-bottom: 0;
+        }
+
     }
 
     &__block {
-        display: flex;
+        /* display: flex; */
+        display: inline-block;
+        width: 100%;
+        flex-grow: 1;
         /* align-items: center; */
-        margin-top: 50px;
+        margin-bottom: 50px;
+        flex-basis: 50%;
+        &_with-img {
+
+        }
+        &:hover {
+            h3 {
+                color: #0a3fb4;
+            }
+
+            /* > a {
+                &:first-child {
+                    picture {
+                        position: relative;
+                        &::after {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            content: "";
+                            background-color: #0a3fb4;
+                            width: 100%;
+                            opacity: 0.3;
+                            z-index: 9999;
+                        }
+                    }
+                }
+            } */
+            
+        }
+        &.news__block_with-img {
+            flex-direction: column;
+            /* grid-area: 2/1/4/2; */
+            /* flex-grow: 2;
+            flex-basis: 100%; */
+        }
     }
 
     &__item {
         display: flex;
-        
+
         flex-direction: column;
         max-width: 285px;
 
@@ -36,12 +88,6 @@
             letter-spacing: 0.02em;
             color: rgba(5, 25, 69, 0.5);
         }
-
-        &:hover {
-            h3 {
-                color: #0a3fb4;
-            }
-        }
     }
 
     &__date {
@@ -56,6 +102,7 @@
 
     &__img {
         margin-right: 19px;
+        border-radius: 5px;
         border-radius: 5px;
     }
 

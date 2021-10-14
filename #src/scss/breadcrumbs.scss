@@ -1,6 +1,21 @@
 .breadcrumbs {
     padding: 30px 0 0;
 
+    &.breadcrumbs_white {
+        .breadcrumbs__link {
+            color: #051945;
+            &::after, &::before{
+                background: rgba(5, 25, 69, 0.5);
+            }
+        }
+
+        .breadcrumbs__current {
+            color: rgba(5, 25, 69, 0.5);
+        }
+
+        
+    }
+
     &__list {
         display: flex;
         align-items: center;

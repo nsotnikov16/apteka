@@ -11,27 +11,25 @@
 </head>
 <body class="page">
 	@@include('_header.html')
+        @@include('_breadcrumbs-and-title.html')
+    
     <main class="main">
-	@@include('_banner.html')
-    @@include('_target.html')
-    @@include('_news-main.html')
-    @@include('_main-review.html')
-    @@include('_main-swiper.html')
-
-    @@include('_ymaps.html')
-
-    <!-- <div class="map-info">
-        <p class="map-info__title">Аптечный пункт</p>   
-        <div class="map-info__row">
-            <img src="img/icons/adress-map.svg" alt="adress">
-            <p>ХМАО-Югры, Сургутский район, село Сытомино, ул. Лесная 2В</p>
+        
+        <div class="main__grid page__container">
+            <div class="container">
+              <div class="main__grid-left">
+                @@include('_news-news.html')
+              </div>
+              <div class="main__grid-right">
+                @@include('_calendar.html')
+              </div>
+                
+            </div>
         </div>
-        <div class="map-info__row">
-            <img src="img/icons/phone-map.svg" alt="adress">
-            <a href="tel:+73462589360">8 (3462) 58 93 60 добавочный 62</a>
-        </div>
-    </div> -->
-    <!--  -->
+
+        @@include('_ymaps.html')
+
+    
 
 	</main>
     @@include('_footer.html')
@@ -40,5 +38,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+    
 </body>
 </html>

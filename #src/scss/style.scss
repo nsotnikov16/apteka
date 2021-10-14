@@ -121,6 +121,24 @@ h3.title {
 	background-color: #084a7a;
 }
 
+.main__grid {
+	.container {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+	}
+
+	.main__grid-left {
+		margin-right: 61px;
+	}
+
+	.news {
+		max-width: 650px;
+	}
+	.tabs{ 
+		width: 880px;
+	}
+}
+
 @import "fonts";
 
 @import "normalize";
@@ -146,3 +164,35 @@ h3.title {
 @import "choose-city";
 
 @import "pharmacies";
+
+@import "calendar";
+
+@import "tabs";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

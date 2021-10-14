@@ -5,7 +5,7 @@
 	"main": "index.html",
 	"author": "Fls",
 	"license": "ISC",
-	"scripts":{
+	"scripts": {
 		"deploy": "gh-pages -d fls-gulp"
 	},
 	"devDependencies": {

@@ -1,0 +1,35 @@
+.sidebar {
+  margin-top: 70px;
+
+  &__content {
+  }
+
+  &__links {
+    background: rgba(8, 74, 122, 0.05);
+    padding: 45px;
+    li {
+      list-style-type: none;
+      padding: 0 0 30px;
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    color: #084a7a;
+    opacity: 0.7;
+    &:hover {
+        opacity: 1;
+    }
+  }
+}

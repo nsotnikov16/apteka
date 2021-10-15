@@ -52,3 +52,28 @@
         margin: 0;
     }
 }
+
+.documents {
+    .swiper-slide {
+        flex-shrink: 1;
+        margin-right: 75px;
+        &:last-child {
+            margin-right: 0;
+        }
+        .documents__current-title {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        > *:first-child {
+            width: 241px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+}

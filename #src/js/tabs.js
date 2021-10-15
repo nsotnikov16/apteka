@@ -17,7 +17,6 @@ if (tabs.length > 0) {
     tabs.forEach(function (tabsContainer) {
         var tabsControls = tabsContainer.querySelector(".tabs__controls");
         var labels = tabsControls.querySelectorAll('label')
-        console.log(labels)
         labels.forEach((label, ind, arr) => {
             label.addEventListener('click', (evt) => {
                 arr.forEach(item => {

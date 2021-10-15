@@ -1,5 +1,20 @@
-var swiper = new Swiper('.main-swiper .swiper', {
+/* Свайпер */
+var swiperMain = new Swiper('.main-swiper .swiper', {
     slidesPerView: 5,
+    /* direction: getDirection(), */
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+/*     on: {
+      resize: function () {
+        swiper.changeDirection(getDirection());
+      },
+    }, */
+  });
+
+  var swiperDocuments =  new Swiper('.documents .swiper', {
+    slidesPerView: 4,
     /* direction: getDirection(), */
     navigation: {
       nextEl: '.swiper-button-next',
@@ -17,7 +32,11 @@ var swiper = new Swiper('.main-swiper .swiper', {
     var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
 
     return direction;
-  };
+  }
+
+;
+
+/* Яндекс карты */
 ymaps.ready(init);
 function init() {
   // Создание карты.
@@ -81,6 +100,8 @@ function init() {
 });
 }
 ;
+
+/* Селект */
 const selectBtn = document.querySelector('.select__btn');
 const selectExpand = document.querySelector('.select__expand');
 
@@ -116,6 +137,8 @@ if(selectBtn) {
     
 }
 ;
+
+/* Календарь */
 const calendar = document.querySelector(".calendar")
 if (calendar) {
   const calendarBtn = calendar.querySelector('.calendar__btn')
@@ -242,6 +265,8 @@ if (calendar) {
   //
 }
 ;
+
+/* Табы */
 //tabs
 var tabs = document.querySelectorAll(".tabs");
 
@@ -261,7 +286,6 @@ if (tabs.length > 0) {
     tabs.forEach(function (tabsContainer) {
         var tabsControls = tabsContainer.querySelector(".tabs__controls");
         var labels = tabsControls.querySelectorAll('label')
-        console.log(labels)
         labels.forEach((label, ind, arr) => {
             label.addEventListener('click', (evt) => {
                 arr.forEach(item => {
@@ -278,6 +302,97 @@ if (tabs.length > 0) {
         tabsContainer.dataset.loaded = "true";
     });
 };
+
+/* Попапы */
+const popups = document.querySelectorAll('.popup')
+
+
+if(popups.length > 0) {
+    popups.forEach(popup => {
+        const id = popup.id;
+        const closeBtn = popup.querySelector('.close-btn')
+        const popupContainer = popup.querySelector('.popup__container');
+
+        const links = document.querySelectorAll(`[data-pointer="${id}"]`)
+        links.forEach(link => {
+            link.addEventListener('click', ({target}) => {
+                open(link.dataset.pointer, target)
+            })
+        })
+
+
+        closeBtn.addEventListener('click', () => close())
+
+        function open(pointer, target) {
+            if(pointer === id) popup.classList.add('popup_opened')
+            if(pointer === 'license') {
+                popup.querySelector('.popup__image').src = target.src
+                popup.querySelector('source').srcset = target.src
+            }
+
+            document.addEventListener('keydown', handleEscClose)
+        }
+
+        function close () {
+            popup.classList.remove('popup_opened')
+            document.removeEventListener('keydown', handleEscClose)
+        }
+
+        function handleEscClose (evt) {
+            if (evt.keyCode === 27) {
+                close()
+            }
+        }
+
+        function handleOverlayClick(evt) {
+            console.log(evt.target)
+            if (evt.target === evt.currentTarget) {
+                close();
+            }
+        }
+
+        popupContainer.addEventListener('click', (evt) => handleOverlayClick(evt))
+    })
+
+};
+
+/* Загрузить все фото */
+const photos = document.querySelectorAll('.media__photo')
+
+if(photos.length > 0) {
+    photos.forEach(block => {
+        const btnMore = block.querySelector('#more')
+        const btnMoreText = btnMore.querySelector('span')
+        const gallery = block.querySelectorAll('.media__photo-current')
+
+
+        const hide = () => {
+            gallery.forEach((item, index, arr) => {
+                if(index > 5) item.style.display = 'none'
+            })
+        }
+
+        const show = () => {
+            gallery.forEach(item => {
+                if(item.style.display === 'none') item.style.display = 'block';
+            })
+        }
+
+        hide()
+
+        btnMore.addEventListener('click', () => {
+            if(btnMore.value === "yes") {
+                show()
+                btnMore.value = 'no'
+                btnMoreText.textContent = 'Свернуть'
+            } else {
+                hide()
+                btnMore.value = 'yes'
+                btnMoreText.textContent = 'Показать все'
+            }
+        })
+    })
+}
 
 // Двухуровневое меню
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')

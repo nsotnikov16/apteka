@@ -1,0 +1,62 @@
+<div class="reviews">
+    <p class="reviews__pleace">
+        Пожалуйста заполните все поля ниже, Ваш отзыв получит директор аптеки.
+    </p>
+
+    <form class="reviews__form">
+        <h3 class="reviews__title">Заполните форму ниже</h3>
+        <div class="reviews__rows">
+            <div class="reviews__row">
+                <label class="reviews__label" for="">Ваше имя</label>
+                <input class="reviews__input" required placeholder="Ваше имя" type="text">
+            </div>
+            <div class="reviews__row">
+                <label class="reviews__label" for="">Ваш телефон</label>
+                <input class="reviews__input" required placeholder="Ваш телефон" type="text">
+            </div>
+            <div class="reviews__row">
+                <label class="reviews__label" for="choose">Адрес аптеки</label>
+                <div action="#" class="select">
+                    <a id="choose" class="select__btn">
+                            <img src="img/icons/adress-map.svg" alt="#">
+                            <span>Выберите аптеку</span>
+                        </a>
+                    <div class="select__expand">
+                        <div class="select__expand-layout">
+                            <div class="select__option">
+                                <label for="Surgut" class="select__label">г. Сургут, ул. Комсомольский 10/1</label>
+                                <input type="checkbox" name="city" value="Surgut" id="Surgut">
+                            </div>
+                            <div class="select__option">
+                                <label for="Pyt-Yah" class="select__label">г. Сургут, ул. Комсомольский 14/1</label>
+                                <input type="checkbox" name="city" value="Pyt-Yah"  id="Pyt-Yah">
+                            </div>
+                            <div class="select__option">
+                                <label for="White-Yar" class="select__label">г. Сургут, ул. Комсомольский 14/1</label>
+                                <input type="checkbox" name="city" value="White-Yar"  id="White-Yar">
+                            </div>
+                            <div class="select__option">
+                                <label for="Berezovo" class="select__label">г. Сургут, ул. Комсомольский 14/1</label>
+                                <input type="checkbox" name="city" value="Berezovo"  id="Berezovo">
+                            </div>
+                            <div class="select__option">
+                                <label for="Igrim" class="select__label">г. Сургут, ул. Комсомольский 14/1</label>
+                                <input type="checkbox" name="city" value="Igrim" id="Igrim">
+                            </div>
+                            <div class="select__option">
+                                <label for="Sytomino" class="select__label">г. Сургут, ул. Комсомольский 14/1</label>
+                                <input type="checkbox" name="city" value="Sytomino"  id="Sytomino">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="reviews__row">
+                <label class="reviews__label" for="">Сообщение</label>
+                <textarea class="reviews__input" required placeholder="Напишите ваш отзыв или предложение"></textarea>
+            </div>
+        </div>
+        <button class="reviews__btn">Отправить отзыв</button>
+    </form>
+</div>

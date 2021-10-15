@@ -1,8 +1,23 @@
+/* Свайпер */
 @@include('swiper.js');
+
+/* Яндекс карты */
 @@include('yandex-map.js');
+
+/* Селект */
 @@include('chooseCity.js');
+
+/* Календарь */
 @@include('calendar.js');
+
+/* Табы */
 @@include('tabs.js');
+
+/* Попапы */
+@@include('popups.js');
+
+/* Загрузить все фото */
+@@include('more-photo.js')
 
 // Двухуровневое меню
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')

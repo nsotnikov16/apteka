@@ -1,0 +1,131 @@
+.documents {
+    // .documents__documents
+    margin-bottom: 180px;
+    &__documents,
+    &__licenses {
+        margin-top: 40px;
+        max-width: 678px;
+    }
+
+    // .documents__title
+
+    &__title {
+        margin-bottom: 38px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        color: #084a7a;
+    }
+
+    // .documents__document
+
+    &__document {
+        display: flex;
+
+        padding-bottom: 21px;
+        margin-top: 16px;
+        border-bottom: 1px solid #cedbe4;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    // .documents__img
+
+    &__img {
+        width: 100px;
+        height: 80px;
+        background: #ee2c2c;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 35px;
+        img {
+            width: 45px;
+            height: 45px;
+        }
+    }
+
+    // .documents__description
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    // .documents__current-title
+
+    &__current-title {
+        font-size: 16px;
+        line-height: 24px;
+        color: #051945;
+        width: 90%;
+    }
+
+    // .documents__download
+
+    &__download {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // .documents__size
+
+    &__size {
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+        color: rgba(5, 25, 69, 0.5);
+    }
+
+    // .documents__click
+
+    &__click {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-transform: uppercase;
+        img {
+            margin-right: 8px;
+        }
+
+        p {
+            color: #0a3fb4;
+        }
+    }
+
+    // .documents__licenses
+
+    &__licenses {
+        position: relative;
+        height: 490px;
+    }
+
+    &__absolute {
+        position: absolute;
+        width: 1190px;
+        content: "";
+        top: 62px;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .tabs__tab {
+        .documents__licenses {
+            
+        }
+
+        .documents__absolute {
+            
+            width: 880px;
+        }
+    }
+}

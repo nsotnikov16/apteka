@@ -72,6 +72,10 @@ $green: #1fc18f;
 		justify-content: center;
 		align-items: center;
 	}
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .title {
@@ -111,6 +115,7 @@ h3.title {
 	line-height: 43px;
 	color: #084a7a;
 	padding: 38px 0 32px;
+	max-width: 815px;
 }
 
 .page__title_white {
@@ -129,6 +134,9 @@ h3.title {
 
 	.main__grid-left {
 		margin-right: 61px;
+		&.mr-0 {
+			margin-right: 0;
+		}
 	}
 
 	.news {
@@ -153,7 +161,7 @@ h3.title {
 
 @import "main-review";
 
-@import "main-swiper";
+@import "swiper";
 
 @import "map";
 
@@ -171,10 +179,12 @@ h3.title {
 
 @import "sidebar";
 
+@import "reviews";
 
+@import "documents";
 
-
-
+@import "media";
+@import "popup";
 
 
 

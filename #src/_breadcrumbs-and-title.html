@@ -6,6 +6,7 @@
           <a href="/" class="breadcrumbs__link" href="/">Главная</a>
         </li>
         <li class="breadcrumbs__item">
+          <!-- Последний пункт -->
           <a href="/pharmacies.html" class="breadcrumbs__current">Аптеки</a>
         </li>
       </ul>
@@ -15,6 +16,7 @@
 </div>
 
 
+<!-- Удалить при интеграции! -->
 <script>
     const breadcrumbs = document.querySelector('.breadcrumbs')
     const breadcrumbsCurrent = breadcrumbs.querySelector('.breadcrumbs__current')
@@ -32,5 +34,10 @@
     }
     
     loc === '/news.html' ? editText('Новости') : ''
+    loc === '/news__detail.html' ? editText('Диетолог Петрова: шоколад и конфеты могут вызывать у взрослых опасные болезни') : ''
+    loc === '/reviews.html' ? editText('Отзывы и предложения') : ''
+    loc === '/documents.html' ? editText('Документы и лицензии') : ''
+    loc === '/media.html' ? editText('Видео и фото') : ''
 
 </script>
+<!--  -->

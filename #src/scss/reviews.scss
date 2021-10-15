@@ -1,0 +1,152 @@
+.reviews {
+    // .reviews__pleace
+    margin-bottom: 218px;
+    &__pleace {
+        font-size: 16px;
+        line-height: 26px;
+        /* or 162% */
+
+        color: #051945;
+        margin-bottom: 32px;
+        max-width: 460px;
+    }
+
+    // .reviews__form
+
+    &__form {
+        padding: 37px 40px 42px;
+        background: #004b80;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .reviews__title
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        /* identical to box height */
+
+        color: #ffffff;
+    }
+
+    // .reviews__rows
+
+    &__rows {
+        max-width: 540px;
+        padding-top: 28px;
+    }
+
+    // .reviews__row
+
+    &__row {
+        display: flex;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+        /* width: 380px; */
+        padding-bottom: 28px;
+
+        &:last-child {
+            padding-bottom: 38px;
+        }
+    }
+
+    // .reviews__label
+
+    &__label {
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        color: rgba(255, 255, 255, 0.5);
+        flex-basis: 40%;
+    }
+
+    // .reviews__input
+
+    &__input {
+        border: 1px solid #cedbe4;
+        box-sizing: border-box;
+        border-radius: 3px;
+        font-size: 14px;
+        line-height: 17px;
+        /* identical to box height */
+
+        color: #7a9eb9;
+        outline: none;
+        padding: 16px 20px;
+        width: 100%;
+    }
+
+    &__btn {
+        background: #1fc18f;
+        border-radius: 3px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+
+        color: #ffffff;
+        padding: 16px 35px;
+        box-sizing: border-box; 
+        border: none;
+        outline: none;
+        display: inline-block; 
+
+        
+        
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .select {
+        // .select__btn
+        width: 100%;
+        background: #ffffff;
+        &__btn {
+            padding: 16px 26px 17px 0;
+            box-sizing: border-box;
+            border-radius: 3px;
+            width: 100%;
+            font-size: 14px;
+            line-height: 17px;
+            /* identical to box height */
+            opacity: 1;
+            color: #7a9eb9;
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 6px;
+            }
+            &::before,
+            &::after {
+                background: #7a9eb9;
+            }
+        }
+
+        // .select__expand
+
+        &__expand {
+        }
+
+        // .select__expand-layout
+
+        &__expand-layout {
+        }
+
+        // .select__option
+
+        &__option {
+        }
+
+        // .select__label
+
+        &__label {
+        }
+    }
+}

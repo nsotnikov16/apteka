@@ -110,7 +110,7 @@
 
     &__absolute {
         position: absolute;
-        width: 1190px;
+        width: 880px;
         content: "";
         top: 62px;
         bottom: 0;
@@ -118,14 +118,8 @@
         left: 0;
     }
 
-    .tabs__tab {
-        .documents__licenses {
-            
-        }
-
-        .documents__absolute {
-            
-            width: 880px;
-        }
+    &__absolute_wide {
+        width: 1190px;
     }
+
 }

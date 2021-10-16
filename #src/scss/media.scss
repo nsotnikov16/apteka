@@ -66,6 +66,9 @@
     &__photo-current {
         max-width: 272px;
         border-radius: 3px;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     // .media__photo-more

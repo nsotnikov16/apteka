@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Региональный аптечный склад</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+</head>
+<body class="page">
+	@@include('_header.html')
+        @@include('_breadcrumbs-and-title.html')
+    
+    <main class="main">
+        
+        <div class="page__container">
+            <div class="container">
+             @@include('_contacts.html')
+                
+            </div>
+        </div>
+
+        @@include('_ymaps.html')
+
+    
+
+	</main>
+    @@include('_footer.html')
+    
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=0c806cde-3ca9-4cb6-8402-37cc28c02fb9&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

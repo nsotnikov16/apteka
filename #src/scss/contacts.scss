@@ -1,0 +1,146 @@
+.contacts {
+  margin-bottom: 130px;
+
+  .contacts {
+    // .contacts__departament
+
+    &__departaments {
+      margin-top: 51px;
+    }
+
+    &__departament {
+      display: flex;
+      margin-bottom: 82px;
+      &:last-child {
+          margin-bottom: 0;
+      }
+    }
+
+    // .contacts__departament-title
+
+    &__departament-title {
+      text-align: left;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      /* identical to box height, or 125% */
+
+      color: #084a7a;
+      flex-basis: 35%;
+    }
+
+    // .contacts__posts
+
+    &__posts {
+      flex-grow: 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    // .contacts__post
+
+    &__post {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 0 20px;
+      border-bottom: 1px solid #cedbe4;
+      &:first-child {
+        border-top: 1px solid #cedbe4;
+      }
+    }
+
+    &__post-title {
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box height, or 157% */
+
+      color: rgba(5, 25, 69, 0.5);
+      flex-basis: 30%;
+    }
+
+    // .contacts__fio
+
+    &__fio {
+      font-size: 14px;
+      line-height: 22px;
+      /* or 157% */
+
+      color: #051945;
+      flex-basis: 20%;
+      margin-right: 33px;
+    }
+
+    // .contacts__contacts
+
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+
+        > * {
+            margin-bottom: 7px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // .contacts__number
+
+    &__numbers {
+      display: flex;
+
+      img {
+          margin-right: 11px;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 20px;
+
+        
+      }
+    }
+
+    &__number {
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box  height, or 157% */
+      display: flex;
+
+      color: #051945;
+    }
+
+    // .contacts__email
+
+    &__emails {
+      display: flex;
+
+      img {
+        margin-right: 11px;
+        margin-top: 4px;
+    }
+
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 20px;
+
+        
+      }
+    }
+
+    &__email {
+      font-size: 14px;
+      line-height: 22px;
+      /* identical to box height, or 157% */
+
+      color: #0a3fb4;
+    }
+  }
+
+  ul {
+    list-style: none;
+  }
+}

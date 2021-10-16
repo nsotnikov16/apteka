@@ -3,7 +3,7 @@ const photos = document.querySelectorAll('.media__photo')
 if(photos.length > 0) {
     photos.forEach(block => {
         const btnMore = block.querySelector('#more')
-        const btnMoreText = btnMore.querySelector('span')
+
         const gallery = block.querySelectorAll('.media__photo-current')
 
 
@@ -22,6 +22,7 @@ if(photos.length > 0) {
         hide()
 
         if(btnMore) {
+            const btnMoreText = btnMore.querySelector('span')
             btnMore.addEventListener('click', () => {
                 if(btnMore.value === "yes") {
                     show()

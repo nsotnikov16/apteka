@@ -21,16 +21,19 @@ if(photos.length > 0) {
 
         hide()
 
-        btnMore.addEventListener('click', () => {
-            if(btnMore.value === "yes") {
-                show()
-                btnMore.value = 'no'
-                btnMoreText.textContent = 'Свернуть'
-            } else {
-                hide()
-                btnMore.value = 'yes'
-                btnMoreText.textContent = 'Показать все'
-            }
-        })
+        if(btnMore) {
+            btnMore.addEventListener('click', () => {
+                if(btnMore.value === "yes") {
+                    show()
+                    btnMore.value = 'no'
+                    btnMoreText.textContent = 'Свернуть'
+                } else {
+                    hide()
+                    btnMore.value = 'yes'
+                    btnMoreText.textContent = 'Показать все'
+                }
+            })
+        }
+        
     })
 }

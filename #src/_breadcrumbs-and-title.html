@@ -28,7 +28,7 @@
         breadcrumbsCurrent.textContent = text
     };
 
-    if(loc !== '/pharmacies.html') {
+    if(loc.indexOf('/pharmacies.html') === -1) {
         pageTitle.classList.remove('page__title_white')
         breadcrumbs.classList.add('breadcrumbs_white')
     }

@@ -33,11 +33,11 @@
         breadcrumbs.classList.add('breadcrumbs_white')
     }
     
-    loc === '/news.html' ? editText('Новости') : ''
-    loc === '/news__detail.html' ? editText('Диетолог Петрова: шоколад и конфеты могут вызывать у взрослых опасные болезни') : ''
-    loc === '/reviews.html' ? editText('Отзывы и предложения') : ''
-    loc === '/documents.html' ? editText('Документы и лицензии') : ''
-    loc === '/media.html' ? editText('Видео и фото') : ''
-    loc === '/contacts.html' ? editText('Контакты') : ''
+    loc.indexOf('/news.html') > -1 ? editText('Новости') : ''
+    loc.indexOf('/news__detail.html') > -1 ? editText('Диетолог Петрова: шоколад и конфеты могут вызывать у взрослых опасные болезни') : ''
+    loc.indexOf('/reviews.html') > -1 ? editText('Отзывы и предложения') : ''
+    loc.indexOf('/documents.html') > -1 ? editText('Документы и лицензии') : ''
+    loc.indexOf('/media.html') > -1 ? editText('Видео и фото') : ''
+    loc.indexOf('/contacts.html') > -1 ? editText('Контакты') : ''
 </script>
 <!--  -->

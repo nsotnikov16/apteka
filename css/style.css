@@ -157,6 +157,42 @@ h3.title {
   width: 880px;
 }
 
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 77px;
+}
+
+.pagination__prev {
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.pagination a {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #051945;
+}
+
+.pagination a:hover,
+.pagination a.active {
+  color: #0A3FB4;
+}
+
+.pagination > * {
+  margin-right: 30px;
+}
+
+.pagination > *:last-child {
+  margin-right: 0;
+}
+
 @font-face {
   font-family: "MuseoSansCyrl";
   font-display: swap;
@@ -2671,7 +2707,7 @@ input {
 
 .documents__absolute {
   position: absolute;
-  width: 1190px;
+  width: 880px;
   content: "";
   top: 62px;
   bottom: 0;
@@ -2679,8 +2715,8 @@ input {
   left: 0;
 }
 
-.documents .tabs__tab .documents__absolute {
-  width: 880px;
+.documents__absolute_wide {
+  width: 1190px;
 }
 
 .media {
@@ -2729,6 +2765,10 @@ input {
 .media__photo-current {
   max-width: 272px;
   border-radius: 3px;
+}
+
+.media__photo-current:hover {
+  cursor: pointer;
 }
 
 .media__photo-more {
@@ -2818,7 +2858,158 @@ input {
 }
 
 .popup__image {
-  width: 600px;
+  width: 30vw;
+}
+
+.contacts {
+  margin-bottom: 130px;
+}
+
+.contacts .contacts__departaments {
+  margin-top: 51px;
+}
+
+.contacts .contacts__departament {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 82px;
+}
+
+.contacts .contacts__departament:last-child {
+  margin-bottom: 0;
+}
+
+.contacts .contacts__departament-title {
+  text-align: left;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  /* identical to box height, or 125% */
+  color: #084a7a;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.contacts .contacts__posts {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts .contacts__post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0 20px;
+  border-bottom: 1px solid #cedbe4;
+}
+
+.contacts .contacts__post:first-child {
+  border-top: 1px solid #cedbe4;
+}
+
+.contacts .contacts__post-title {
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+  color: rgba(5, 25, 69, 0.5);
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.contacts .contacts__fio {
+  font-size: 14px;
+  line-height: 22px;
+  /* or 157% */
+  color: #051945;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-right: 33px;
+}
+
+.contacts .contacts__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.contacts .contacts__contacts > * {
+  margin-bottom: 7px;
+}
+
+.contacts .contacts__contacts > *:last-child {
+  margin-bottom: 0;
+}
+
+.contacts .contacts__numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts .contacts__numbers img {
+  margin-right: 11px;
+}
+
+.contacts .contacts__numbers ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.contacts .contacts__number {
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box  height, or 157% */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #051945;
+}
+
+.contacts .contacts__emails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts .contacts__emails img {
+  margin-right: 11px;
+  margin-top: 4px;
+}
+
+.contacts .contacts__emails ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.contacts .contacts__email {
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+  color: #0a3fb4;
+}
+
+.contacts ul {
+  list-style: none;
 }
 
 @media screen and (min-width: 768px) {

@@ -325,7 +325,7 @@ if(popups.length > 0) {
 
         function open(pointer, target) {
             if(pointer === id) popup.classList.add('popup_opened')
-            if(pointer === 'license') {
+            if(pointer === 'photo') {
                 popup.querySelector('.popup__image').src = target.src
                 popup.querySelector('source').srcset = target.src
             }

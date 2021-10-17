@@ -11,6 +11,18 @@ var swiperMain = new Swiper('.main-swiper .swiper', {
         swiper.changeDirection(getDirection());
       },
     }, */
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 5,
+      }
+    },
+    /* autoHeight: true, */
+
   });
 
   var swiperDocuments =  new Swiper('.documents .swiper', {
@@ -459,4 +471,14 @@ console.log(date.getFullYear())
 console.log(date.getMonth() + 1)
 console.log(date.getDate()) */
 
+
+if(window.innerWidth <= 768) {
+    $('.footer__down-right').append($('.copyright'))
+} 
+
+$(window).resize(function () {
+    if(window.innerWidth <= 768) {
+        $('.footer__down-right').append($('.copyright'))
+    } 
+})
 

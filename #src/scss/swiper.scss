@@ -1,79 +1,150 @@
-
 .main-swiper {
-    margin: 15px 0;
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    /* position: relative; */
-    .swiper {
-        /* position: static; */
-        width: 100%;
-    }
-    .swiper-slide {
-        /* display: flex;
+  margin: 15px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  /* position: relative; */
+  .swiper {
+    /* position: static; */
+    width: 100%;
+  }
+  .swiper-slide {
+    /* display: flex;
         justify-content: center; */
-        /* align-items: center; */
-        max-width: 20%;
-        margin-right: 7%;
-    }
+    /* align-items: center; */
+    max-width: 20%;
+    margin-right: 7%;
+  }
 
-    .swiper-wrapper {
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-        /* position: static; */
-    }
+  .swiper-wrapper {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* position: static; */
+  }
 
-    .swiper-button-prev {
-        /* left: 5%; */
-        position: static;
-        color: #051945;
-        transform: translateX(-28px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-    }
-    .swiper-button-next {
-        /* right: 5%; */
-        position: static;
-        color: #051945;
-        transform: translateX(28px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0;
-    }
+  .swiper-button-prev {
+    /* left: 5%; */
+    position: static;
+    color: #051945;
+    transform: translateX(-28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+  .swiper-button-next {
+    /* right: 5%; */
+    position: static;
+    color: #051945;
+    transform: translateX(28px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 
-    .swiper-button-next:after, .swiper-button-prev:after {
-        font-size: 28px;
-        margin: 0;
-    }
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 28px;
+    margin: 0;
+  }
 }
 
 .documents {
+  .swiper-slide {
+    flex-shrink: 1;
+    margin-right: 75px;
+    &:last-child {
+      margin-right: 0;
+    }
+    .documents__current-title {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    > *:first-child {
+      width: 241px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-swiper {
+    
+    .container {
+      
+    }
+    
+    .swiper {
+      
+      
+    }
     .swiper-slide {
-        flex-shrink: 1;
-        margin-right: 75px;
-        &:last-child {
-            margin-right: 0;
-        }
-        .documents__current-title {
-            width: 100%;
-            margin-bottom: 20px;
+        max-width: none;
+        margin-right: 5%;
+        img {
+            width: calc(120px + (160 + 160 * 0.7) * ((100vw - 320px) / 768));
         }
 
-        > *:first-child {
-            width: 241px;
-            &:hover {
-                cursor: pointer;
-            }
+        img.swiper__minimg {
+            width: calc(40px + (160 + 160 * 0.7) * ((100vw - 320px) / 768));
         }
     }
 
-    .swiper-button-next, .swiper-button-prev {
-        display: none;
+
+    .swiper-autoheight {
+        .swiper-wrapper  {
+            align-items: center;
+        }
     }
+
+    
+
+    .swiper-button-prev {
+        transform: translateX(-10px);
+    }
+    .swiper-button-next {
+        transform: translateX(10px);
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+      
+    }
+  }
+
+  .documents {
+    .swiper-slide {
+      
+      &:last-child {
+        
+      }
+      .documents__current-title {
+        
+      }
+
+      > *:first-child {
+        
+        &:hover {
+          
+        }
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      
+    }
+  }
 }

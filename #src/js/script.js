@@ -81,3 +81,13 @@ console.log(date.getMonth() + 1)
 console.log(date.getDate()) */
 
 
+if(window.innerWidth <= 768) {
+    $('.footer__down-right').append($('.copyright'))
+} 
+
+$(window).resize(function () {
+    if(window.innerWidth <= 768) {
+        $('.footer__down-right').append($('.copyright'))
+    } 
+})
+

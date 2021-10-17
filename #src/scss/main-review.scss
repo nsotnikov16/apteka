@@ -17,3 +17,26 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .main-review {
+        padding: 57px 0;
+    
+        &__block {
+            grid-template-columns: 1fr;
+
+            .title {
+                margin-bottom: 20px;
+            }
+        }
+        
+        &__right {
+            p {
+                
+                
+            }
+        }
+    } 
+
+}

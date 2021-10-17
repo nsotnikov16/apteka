@@ -1131,6 +1131,7 @@ input {
   font-size: 24px;
   line-height: 29px;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .target__text-top p {
@@ -1172,7 +1173,11 @@ input {
   display: inline-block;
 }
 
-.target__info a p {
+.target__info-bb:hover {
+  cursor: pointer;
+}
+
+.target__info-bb p {
   border-bottom: 1px dashed rgba(5, 25, 69, 0.5);
 }
 
@@ -1530,7 +1535,7 @@ input {
 
 .main-swiper .swiper-slide {
   /* display: flex;
-  justify-content: center; */
+      justify-content: center; */
   /* align-items: center; */
   max-width: 20%;
   margin-right: 7%;
@@ -1835,7 +1840,7 @@ input {
 }
 
 .footer .mode p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer__adress .map-info__row {
@@ -1843,7 +1848,7 @@ input {
 }
 
 .footer__adress .map-info__row p {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .logo_footer {
@@ -3415,6 +3420,195 @@ input {
 
   .director__text span {
     display: block;
+  }
+
+  .target__img {
+    width: calc(290px + 187 * (100vw - 320px) / 768);
+  }
+
+  .target__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .target__block .title {
+    margin-bottom: 28px;
+  }
+
+  .target__text-top {
+    margin-top: 25px;
+    max-width: 100%;
+  }
+
+  .target__text-top h3 {
+    line-height: 32px;
+  }
+
+  .target__text-down {
+    max-width: 100%;
+  }
+
+  .target__text-down .target__target {
+    font-size: 21px;
+  }
+
+  .target__info ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .target__info li {
+    margin-bottom: 26px;
+  }
+
+  .target__info li:last-child {
+    margin-bottom: 0;
+  }
+
+  .news__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .news__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 0;
+  }
+
+  .news__img {
+    margin-bottom: 20px;
+  }
+
+  .news__img img {
+    width: calc(290px + 187 * (100vw - 320px) / 768);
+  }
+
+  .news__item {
+    max-width: 95%;
+  }
+
+  .news__item h3 {
+    max-width: 90%;
+  }
+
+  .main-review {
+    padding: 57px 0;
+  }
+
+  .main-review__block {
+    grid-template-columns: 1fr;
+  }
+
+  .main-review__block .title {
+    margin-bottom: 20px;
+  }
+
+  .main-swiper .swiper-slide {
+    max-width: none;
+    margin-right: 5%;
+  }
+
+  .main-swiper .swiper-slide img {
+    width: calc(120px + 272 * (100vw - 320px) / 768);
+  }
+
+  .main-swiper .swiper-slide img.swiper__minimg {
+    width: calc(40px + 272 * (100vw - 320px) / 768);
+  }
+
+  .main-swiper .swiper-autoheight .swiper-wrapper {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .main-swiper .swiper-button-prev {
+    -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  .main-swiper .swiper-button-next {
+    -webkit-transform: translateX(10px);
+        -ms-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+
+  .map__absolute {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: 100%;
+    position: static;
+    max-width: none;
+    padding-left: 15px;
+  }
+
+  .map__absolute-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .map__absolute-info p {
+    font-size: 13px;
+  }
+
+  .footer {
+    padding-top: 180px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+
+  .footer__down {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+  }
+
+  .footer__links {
+    grid-template-columns: 1fr 1fr;
+    margin-right: 0;
+    margin-bottom: 38px;
+  }
+
+  .footer__subtitle {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .footer__down-left {
+    padding-bottom: 20px;
+  }
+
+  .footer .phone {
+    font-size: 23px;
+    margin-bottom: 27px;
+  }
+
+  .copyright {
+    margin-top: 40px;
   }
 }
 

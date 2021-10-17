@@ -10,6 +10,18 @@ var swiperMain = new Swiper('.main-swiper .swiper', {
         swiper.changeDirection(getDirection());
       },
     }, */
+
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 5,
+      }
+    },
+    /* autoHeight: true, */
+
   });
 
   var swiperDocuments =  new Swiper('.documents .swiper', {

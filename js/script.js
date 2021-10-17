@@ -428,6 +428,14 @@ const banner = document.querySelector('.banner')
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('burger_open')
     menu.classList.toggle('menu_open')
+
+    if(menu.classList.contains('menu_open')) {
+        document.querySelector('main').style.display = "none"
+        document.querySelector('footer').style.display = "none"
+    } else {
+        document.querySelector('main').style.display = "block"
+        document.querySelector('footer').style.display = "block"
+    }
     if(banner) banner.classList.toggle('bc-white');
 })
 

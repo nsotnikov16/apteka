@@ -63,8 +63,9 @@ $green: #1fc18f;
     margin-right: 7px;
   }
 
-  &__span {
+  span {
     color: #0a3fb4;
+    text-transform: uppercase;
   }
 
   picture {
@@ -75,6 +76,7 @@ $green: #1fc18f;
 
   &:hover {
     cursor: pointer;
+    opacity: 0.75;
   }
 }
 
@@ -107,6 +109,10 @@ h3.title {
   align-items: center;
   max-width: 270px;
   @extend %uppercase;
+  &:hover {
+    background-color: #0a3fb4;
+    color: #fff;
+  }
 }
 
 .page__title {
@@ -174,6 +180,10 @@ h3.title {
 		  margin-right: 0;
 	  }
   }
+}
+
+.mb320 {
+  margin-bottom: 320px;
 }
 
 @import "fonts";

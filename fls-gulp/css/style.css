@@ -62,8 +62,9 @@
   margin-right: 7px;
 }
 
-.link-to__span {
+.link-to span {
   color: #0a3fb4;
+  text-transform: uppercase;
 }
 
 .link-to picture {
@@ -80,6 +81,7 @@
 
 .link-to:hover {
   cursor: pointer;
+  opacity: 0.75;
 }
 
 .title {
@@ -117,6 +119,11 @@ h3.title {
       -ms-flex-align: center;
           align-items: center;
   max-width: 270px;
+}
+
+.review-btn:hover {
+  background-color: #0a3fb4;
+  color: #fff;
 }
 
 .page__title {
@@ -191,6 +198,10 @@ h3.title {
 
 .pagination > *:last-child {
   margin-right: 0;
+}
+
+.mb320 {
+  margin-bottom: 320px;
 }
 
 @font-face {
@@ -620,6 +631,10 @@ template {
 body {
   font-family: "MuseoSansCyrl", sans-serif;
   position: relative;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 .flex-row {
@@ -1982,10 +1997,14 @@ input {
   opacity: 0.5;
   margin-left: 11px;
   background: inherit;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .choose-city .search-btn:hover {
   cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #051945;
 }
 
 .select {
@@ -2021,6 +2040,8 @@ input {
   margin: 0 18px;
   width: 100%;
   height: 100%;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .select__btn::before,
@@ -2093,7 +2114,7 @@ input {
 
 .select__option {
   padding: 9px 0;
-  border-top: 1px solid #CEDBE4;
+  border-top: 1px solid #cedbe4;
 }
 
 .select__option:first-child {
@@ -2110,6 +2131,7 @@ input {
 
 .select__label:hover {
   cursor: pointer;
+  color: #0a3fb4;
 }
 
 .pharmacies {
@@ -2307,33 +2329,6 @@ input {
 .calendar table {
   border-collapse: collapse;
 }
-
-/*  .tabs label {
-    display: block;
-    padding: 0 15px 12px 15px;
-    margin-bottom: -2px;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--text-secondary);
-    border-bottom: 2px solid var(--border);
-    cursor: pointer;
-    transition: color 0.15s linear;
-  }
-  @media screen and (min-width: 768px) {
-    .tabs label {
-      font-size: 30px;
-    }
-  }
-  .tabs label:first-of-type {
-    padding-left: 0;
-  }
-  .tabs label:hover {
-    color: var(--text);
-  }
-  .tabs input:checked + label {
-    color: var(--text-decorate);
-    border-color: var(--border-deorate);
-  } */
 
 .visually-hidden {
   position: absolute;
@@ -2550,6 +2545,7 @@ input {
 
 .reviews__btn:hover {
   cursor: pointer;
+  background-color: #0EB581;
 }
 
 .reviews textarea {
@@ -2608,6 +2604,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 650px;
   padding-bottom: 21px;
   margin-top: 16px;
   border-bottom: 1px solid #cedbe4;
@@ -2873,22 +2870,22 @@ input {
   margin-bottom: 130px;
 }
 
-.contacts .contacts__departaments {
+.contacts__departaments {
   margin-top: 51px;
 }
 
-.contacts .contacts__departament {
+.contacts__departament {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 82px;
 }
 
-.contacts .contacts__departament:last-child {
+.contacts__departament:last-child {
   margin-bottom: 0;
 }
 
-.contacts .contacts__departament-title {
+.contacts__departament-title {
   text-align: left;
   font-weight: 600;
   font-size: 24px;
@@ -2899,7 +2896,7 @@ input {
       flex-basis: 35%;
 }
 
-.contacts .contacts__posts {
+.contacts__posts {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
@@ -2912,7 +2909,7 @@ input {
           flex-direction: column;
 }
 
-.contacts .contacts__post {
+.contacts__post {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2923,11 +2920,11 @@ input {
   border-bottom: 1px solid #cedbe4;
 }
 
-.contacts .contacts__post:first-child {
+.contacts__post:first-child {
   border-top: 1px solid #cedbe4;
 }
 
-.contacts .contacts__post-title {
+.contacts__post-title {
   font-size: 14px;
   line-height: 22px;
   /* identical to box height, or 157% */
@@ -2937,7 +2934,7 @@ input {
   max-width: 205px;
 }
 
-.contacts .contacts__fio {
+.contacts__fio {
   font-size: 14px;
   line-height: 22px;
   /* or 157% */
@@ -2947,13 +2944,13 @@ input {
   margin-right: 33px;
 }
 
-.contacts .contacts__fio.requisites {
+.contacts__fio.requisites {
   -ms-flex-preferred-size: 70%;
       flex-basis: 70%;
   margin-right: 0;
 }
 
-.contacts .contacts__contacts {
+.contacts__contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2965,31 +2962,31 @@ input {
       flex-basis: 50%;
 }
 
-.contacts .contacts__contacts > * {
+.contacts__contacts > * {
   margin-bottom: 7px;
 }
 
-.contacts .contacts__contacts > *:last-child {
+.contacts__contacts > *:last-child {
   margin-bottom: 0;
 }
 
-.contacts .contacts__numbers {
+.contacts__numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contacts .contacts__numbers img {
+.contacts__numbers img {
   margin-right: 11px;
 }
 
-.contacts .contacts__numbers ul {
+.contacts__numbers ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 20px;
 }
 
-.contacts .contacts__number {
+.contacts__number {
   font-size: 14px;
   line-height: 22px;
   /* identical to box  height, or 157% */
@@ -2999,24 +2996,24 @@ input {
   color: #051945;
 }
 
-.contacts .contacts__emails {
+.contacts__emails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contacts .contacts__emails img {
+.contacts__emails img {
   margin-right: 11px;
   margin-top: 4px;
 }
 
-.contacts .contacts__emails ul {
+.contacts__emails ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0 20px;
 }
 
-.contacts .contacts__email {
+.contacts__email {
   font-size: 14px;
   line-height: 22px;
   /* identical to box height, or 157% */
@@ -3025,6 +3022,151 @@ input {
 
 .contacts ul {
   list-style: none;
+}
+
+.contacts__pharmacies-adress {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr;
+  gap: 0 20px;
+}
+
+.contacts .pharmacies__city {
+  margin-top: 41px;
+  border-bottom: 0;
+}
+
+.contacts .pharmacies__grid {
+  display: block;
+}
+
+.contacts .pharmacies__grid .mode {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contacts__office {
+  background: #084a7a;
+  padding: 41px 50px 26px 40px;
+  margin-bottom: 33px;
+}
+
+.contacts__office .map-info__row {
+  margin-bottom: 3px;
+}
+
+.contacts__office .map-info__row p {
+  font-size: 16px;
+  line-height: 21px;
+  /* or 131% */
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.contacts__office .mode {
+  margin-bottom: 3px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.contacts__office .mode p {
+  font-size: 16px;
+  line-height: 21px;
+  /* or 131% */
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.contacts__office-title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 26px;
+  /* or 87% */
+  color: #ffffff;
+  margin-bottom: 34px;
+}
+
+.contacts__office-phone {
+  margin-top: 25px;
+  max-width: 315px;
+}
+
+.contacts__office-phone p {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-left: 25px;
+}
+
+.contacts__office-phone a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__office-phone a h3 {
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  color: #1fc18f;
+}
+
+.contacts__office-phone a img {
+  margin-right: 7px;
+}
+
+.contacts__cities {
+  margin-left: 50px;
+}
+
+.contacts__cities-title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 26px;
+  /* identical to box height, or 87% */
+  color: #084a7a;
+  margin-bottom: 33px;
+}
+
+.contacts__city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(5, 25, 69, 0.2);
+}
+
+.contacts__city:first-child {
+  padding-top: 0;
+}
+
+.contacts__city img {
+  margin-right: 10px;
+}
+
+.contacts__city p {
+  font-size: 24px;
+  line-height: 26px;
+  /* identical to box height, or 108% */
+  color: rgba(5, 25, 69, 0.5);
+}
+
+.contacts__city p:hover {
+  font-weight: 600;
+  color: #051945;
+}
+
+.contacts .tabs__controls {
+  max-width: 780px;
 }
 
 @media screen and (min-width: 768px) {

@@ -425,18 +425,14 @@ const menuBtn = document.querySelector('.burger')
 const menu = document.querySelector('.menu')
 const banner = document.querySelector('.banner')
 
+const main = document.querySelector('main')
+const footer = document.querySelector('footer')
+
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('burger_open')
     menu.classList.toggle('menu_open')
 
-    if(menu.classList.contains('menu_open')) {
-        document.querySelector('main').style.display = "none"
-        document.querySelector('footer').style.display = "none"
-    } else {
-        document.querySelector('main').style.display = "block"
-        document.querySelector('footer').style.display = "block"
-    }
-    if(banner) banner.classList.toggle('bc-white');
+    menu.classList.contains('menu_open') ? [main, footer].forEach(item => item.style.display = 'none') : [main, footer].forEach(item => item.style.display = 'block')
 })
 
 

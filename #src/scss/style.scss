@@ -14,8 +14,6 @@
   align-items: $ai;
 }
 
-
-
 $cmain: #084a7a;
 $green: #1fc18f;
 
@@ -117,8 +115,6 @@ h3.title {
   }
 }
 
-
-
 .page__title {
   font-weight: 600;
   font-size: 36px;
@@ -160,29 +156,56 @@ h3.title {
 .pagination {
   display: flex;
   align-items: center;
-	margin-top: 77px;
+  margin-top: 77px;
   &__prev {
     transform: scale(-1, 1);
   }
 
+  &.pagination_news {
+    margin-top: 0;
+    a {
+      text-transform: none;
+      color: #0A3FB4;
+      &:hover,
+      &.active {
+        color: #051945;
+      }
+    }
 
+    .pagination__prev {
+      transform: none;
+    }
+
+    .pagination__next {
+    }
+
+    .pagination__center {
+      > * {
+        margin-right: 28px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
   a {
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
     color: #051945;
 
-	&:hover, &.active {
-		color: #0A3FB4;
-	}
+    &:hover,
+    &.active {
+      color: #0A3FB4;
+    }
   }
 
   > * {
-	  margin-right: 30px;
+    margin-right: 30px;
 
-	  &:last-child {
-		  margin-right: 0;
-	  }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
@@ -190,14 +213,53 @@ h3.title {
   margin-bottom: 320px;
 }
 
-
+.bcwhite {
+  background-color: #fff;
+}
 
 @media (max-width: 768px) {
   .review-btn {
-    
+  }
+
+  .main__grid {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .pagination_news {
+    width: calc(100vw - 30px);
+    >* {
+      display: flex;
+      align-items: center;
+    }
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .pagination__prev {
+      transform: none;
+      margin-right: 0;
+    }
+
+    .pagination__next {
+      grid-column: 2/3;
+      grid-row: 1/1;
+      justify-content: flex-end;
+    }
+
+    .pagination__center {
+      margin-top: 34px;
+      justify-content: center;
+      margin-right: 0;
+      grid-column: span 2;
+      > * {
+        margin-right: 36px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
-
 
 @import "fonts";
 

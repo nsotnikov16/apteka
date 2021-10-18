@@ -11,9 +11,9 @@
     <div class="tabs__content">
       <div class="tabs__tab" data-pointer="tab1">
         <div class="news">
-            
+            @@include('_calendar.html')
             <div class="news__grid news__grid-a">
-                <div class="news__block top news__block_with-img" style="margin-right: 0; flex-direction: row;">
+                <div class="news__block top news__block_with-img" style="margin-right: 0;">
                     <a href="news__detail.html" class="news__img"><img src="img/news.png" alt="news" ></a>
                     <a href="news__detail.html" class="news__item">
                         <h3>Инфекционист рассказал о смертоносном изменении симптомов Covid-19</h3>
@@ -129,6 +129,20 @@
                         </div>
                     </a>
                 </div>
+            </div>
+            <div class="pagination pagination_news">
+                <div class="pagination__prev"><a href="#">&lt; предыдущая</a></div>
+                <div class="pagination__center"><a href="#">1</a>
+                    <a href="#" class="active">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">...</a>
+                    <a href="#">11</a>
+                    <a href="#">12</a></div>
+                <div class="pagination__next"><a href="#">следующая &gt;</a></div>
+                
+                
             </div>
       </div>
 

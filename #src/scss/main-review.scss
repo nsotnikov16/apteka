@@ -23,6 +23,11 @@
     .main-review {
         padding: 57px 0;
     
+
+        &.main-review_pharmacies {
+            padding-top: 180px;
+        }
+
         &__block {
             grid-template-columns: 1fr;
 

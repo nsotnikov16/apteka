@@ -42,6 +42,7 @@ menuBtn.addEventListener('click', () => {
     menu.classList.toggle('menu_open')
 
     menu.classList.contains('menu_open') ? [main, footer].forEach(item => item.style.display = 'none') : [main, footer].forEach(item => item.style.display = 'block')
+    if(document.querySelector('.background-blue')) document.querySelector('.background-blue').classList.toggle('bcwhite')
 })
 
 

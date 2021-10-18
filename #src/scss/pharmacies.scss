@@ -5,7 +5,7 @@
     &__city {
         border-bottom: 1px solid rgba(206, 219, 228, 0.75);
         margin-top: 50px;
-
+        
         &:first-child {
             margin-top: 0;
         }
@@ -59,13 +59,15 @@
     
         &__city {
 
-    
+            .title {
+                line-height: 26px;
+            }
             &:first-child {
 
             }
     
             &:last-child {
-
+                border-bottom: 1px solid rgba(206, 219, 228, 0.75);
             }
         }
     
@@ -85,7 +87,7 @@
     
         &__text {
             h3 {
-                font-size: 13px;
+                font-size: 12px;
                 line-height: 19px;
             }
         }

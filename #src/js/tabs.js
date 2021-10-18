@@ -5,11 +5,14 @@ var showTab = function showTab(self) {
     var pointer = self.value;
     var parentTabs = self.closest(".tabs");
     var tabsContent = parentTabs.querySelectorAll(".tabs__tab");
+    const calendarNews = document.querySelector('.calendar')
     tabsContent.forEach(function (tab) {
         tab.classList.remove("tabs__tab--active");
         if (tab.dataset.pointer === pointer) {
             tab.classList.add("tabs__tab--active");
         }
+
+        /* if(calendarNews && tab.classList.contains('tabs__tab--active') && window.innerWidth <= 768) tab.querySelector('.news').prepend(calendarNews) */
     });
 };
 

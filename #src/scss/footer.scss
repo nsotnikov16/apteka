@@ -108,6 +108,10 @@
 @media (max-width: 768px) {
   .footer {
     padding-top: 180px;
+
+    &.footer_pharmacies {
+      padding-top: 50px;
+    }
     &__top {
         grid-template-columns: 1fr;
         padding-bottom: 40px;
@@ -137,7 +141,7 @@
     }
 
     &__link {
-
+      font-size: 13px;
     }
 
     &__text {

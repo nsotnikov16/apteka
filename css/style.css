@@ -2388,7 +2388,7 @@ input {
 .tabs__controls div {
   position: absolute;
   width: 100%;
-  top: 100%;
+  top: 99%;
   border-bottom: 1px solid #cedbe4;
   z-index: -9999;
 }
@@ -2417,6 +2417,7 @@ input {
   border: 1px solid #cedbe4;
   border-bottom: none;
   position: relative;
+  background: #fff;
 }
 
 .tabs label.label--active::after {

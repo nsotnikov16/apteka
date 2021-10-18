@@ -194,6 +194,20 @@ h3.title {
   color: #051945;
 }
 
+.pagination.pagination_news .pagination__prev {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.pagination.pagination_news .pagination__center > * {
+  margin-right: 28px;
+}
+
+.pagination.pagination_news .pagination__center > *:last-child {
+  margin-right: 0;
+}
+
 .pagination a {
   font-size: 16px;
   line-height: 19px;
@@ -2407,9 +2421,7 @@ input {
   line-height: 19px;
   color: rgba(5, 25, 69, 0.5);
   padding: 16px 45px 15px 38px;
-  /* z-index:9999; */
-  /* border-bottom: 1px solid #cedbe4; */
-  /* border-bottom: 1px solid #cedbe4; */
+  white-space: nowrap;
 }
 
 .tabs label.label--active {
@@ -3383,9 +3395,51 @@ input {
     grid-template-columns: 1fr;
   }
 
-  .main__grid .tabs {
-    /* width: auto;
-    max-width: 880px; */
+  .pagination_news {
+    width: calc(100vw - 30px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pagination_news > * {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .pagination_news .pagination__prev {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    margin-right: 0;
+  }
+
+  .pagination_news .pagination__next {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+  .pagination_news .pagination__center {
+    margin-top: 34px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 0;
+    grid-column: span 2;
+  }
+
+  .pagination_news .pagination__center > * {
+    margin-right: 36px;
+  }
+
+  .pagination_news .pagination__center > *:last-child {
+    margin-right: 0;
   }
 
   .header__contacts {
@@ -3524,16 +3578,6 @@ input {
     width: auto;
   }
 
-  .main__grid .tabs__controls {
-    overflow: auto;
-  }
-
-  .main__grid .tabs__controls label {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
-  }
-
   .main__grid-right .calendar {
     display: none;
   }
@@ -3556,6 +3600,11 @@ input {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-right: 0;
+    width: calc(100vw - 30px);
+  }
+
+  .news__block.news__block_main {
+    grid-row: 2/3;
   }
 
   .news__grid-a .news__block:first-child {
@@ -3585,7 +3634,7 @@ input {
 
   .main__grid .news {
     max-width: none;
-    width: calc(280px + 765 * (100vw - 320px) / 768);
+    /* width: calc(280px + (450 + 450 * 0.7) * ((100vw - 320px) / 768)); */
   }
 
   .news .news__grid-a .news__block:first-child {
@@ -3767,6 +3816,29 @@ input {
   .pharmacies__text h3 {
     font-size: 12px;
     line-height: 19px;
+  }
+
+  .tabs__controls {
+    max-width: 100vw;
+    overflow-x: auto;
+  }
+
+  .tabs__controls label {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .news__block.news__block_with-img .news__img img {
+    width: calc(100vw - 30px);
+  }
+
+  .news .news__grid-a .news__block:first-child .news__img img {
+    width: calc(100vw - 30px);
+  }
+
+  .news__img img {
+    width: calc(100vw - 30px);
   }
 }
 

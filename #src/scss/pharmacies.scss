@@ -28,7 +28,8 @@
 
     &__photo {
         margin-right: 25px;
-        height: 135px;
+        /* height: 135px; */
+        width: 135px;
     }
 
     &__text {
@@ -49,4 +50,58 @@
             color: #051945;
         }
     }
+}
+
+@media (max-width: 768px) {
+
+    .pharmacies {
+
+    
+        &__city {
+
+    
+            &:first-child {
+
+            }
+    
+            &:last-child {
+
+            }
+        }
+    
+        &__grid {
+           grid-template-columns: 1fr;
+            
+        }
+    
+        &__adress {
+            
+        }
+    
+        &__photo {
+            width: calc(90px + (35 + 35 * 0.7) * ((100vw - 320px) / 768));
+            margin-right: 15px;
+        }
+    
+        &__text {
+            h3 {
+                font-size: 13px;
+                line-height: 19px;
+            }
+        }
+    
+        &__contacts {
+            >* {
+               
+            }
+        }
+    
+        .mode {
+            
+            p {
+                
+            }
+        }
+    }
+
 }

@@ -180,6 +180,20 @@ h3.title {
           transform: scale(-1, 1);
 }
 
+.pagination.pagination_news {
+  margin-top: 0;
+}
+
+.pagination.pagination_news a {
+  text-transform: none;
+  color: #0A3FB4;
+}
+
+.pagination.pagination_news a:hover,
+.pagination.pagination_news a.active {
+  color: #051945;
+}
+
 .pagination a {
   font-size: 16px;
   line-height: 19px;
@@ -202,6 +216,10 @@ h3.title {
 
 .mb320 {
   margin-bottom: 320px;
+}
+
+.bcwhite {
+  background-color: #fff;
 }
 
 @font-face {
@@ -1346,6 +1364,10 @@ input {
   grid-column: span 2;
   border-bottom: 1px solid #cedbe4;
   position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .news .news__grid-a .news__block:first-child:hover::after {
@@ -1487,6 +1509,14 @@ input {
 
 .yandex-news span {
   color: #ee2c2c;
+}
+
+.tabs .news {
+  border-top: none;
+}
+
+.tabs .news .calendar {
+  display: none;
 }
 
 .sidebar_reviews .news__block {
@@ -2334,6 +2364,10 @@ input {
 
 .calendar table {
   border-collapse: collapse;
+}
+
+.tabs .news .calendar {
+  margin-bottom: 50px;
 }
 
 .visually-hidden {
@@ -3344,6 +3378,15 @@ input {
 }
 
 @media (max-width: 768px) {
+  .main__grid .container {
+    grid-template-columns: 1fr;
+  }
+
+  .main__grid .tabs {
+    /* width: auto;
+    max-width: 880px; */
+  }
+
   .header__contacts {
     display: none;
   }
@@ -3476,6 +3519,32 @@ input {
     margin-bottom: 0;
   }
 
+  .main__grid .tabs {
+    width: auto;
+  }
+
+  .main__grid .tabs__controls {
+    overflow: auto;
+  }
+
+  .main__grid .tabs__controls label {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+
+  .main__grid-right .calendar {
+    display: none;
+  }
+
+  .tabs .news {
+    padding-top: 30px;
+  }
+
+  .tabs .news .calendar {
+    display: block;
+  }
+
   .news__grid {
     grid-template-columns: 1fr;
   }
@@ -3486,6 +3555,15 @@ input {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-right: 0;
+  }
+
+  .news__grid-a .news__block:first-child {
+    /* grid-column: auto;
+    flex-direction: column; */
+  }
+
+  .news__grid-a .news__item {
+    max-width: none;
   }
 
   .news__img {
@@ -3504,8 +3582,25 @@ input {
     max-width: 90%;
   }
 
+  .main__grid .news {
+    max-width: none;
+    width: calc(280px + 765 * (100vw - 320px) / 768);
+  }
+
+  .news .news__grid-a .news__block:first-child {
+    grid-column: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
   .main-review {
     padding: 57px 0;
+  }
+
+  .main-review.main-review_pharmacies {
+    padding-top: 180px;
   }
 
   .main-review__block {
@@ -3578,6 +3673,10 @@ input {
     padding-top: 180px;
   }
 
+  .footer.footer_pharmacies {
+    padding-top: 50px;
+  }
+
   .footer__top {
     grid-template-columns: 1fr;
     padding-bottom: 40px;
@@ -3592,6 +3691,10 @@ input {
     grid-template-columns: 1fr 1fr;
     margin-right: 0;
     margin-bottom: 38px;
+  }
+
+  .footer__link {
+    font-size: 13px;
   }
 
   .footer__subtitle {
@@ -3643,6 +3746,14 @@ input {
     padding: 15px 0;
   }
 
+  .pharmacies__city .title {
+    line-height: 26px;
+  }
+
+  .pharmacies__city:last-child {
+    border-bottom: 1px solid rgba(206, 219, 228, 0.75);
+  }
+
   .pharmacies__grid {
     grid-template-columns: 1fr;
   }
@@ -3653,7 +3764,7 @@ input {
   }
 
   .pharmacies__text h3 {
-    font-size: 13px;
+    font-size: 12px;
     line-height: 19px;
   }
 }

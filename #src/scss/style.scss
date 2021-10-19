@@ -227,6 +227,34 @@ h3.title {
     }
   }
 
+
+  .page__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .main__grid-right {
+    width: calc(100vw - 30px);
+  }
+
+
+  .main__grid .main__grid-left {
+    margin-right: 0;
+  }
+
+  .media__photo .pagination {
+    justify-content: space-between;
+
+    > * {
+      margin-right: calc(17px + (15 + 15 * 0.7) * ((100vw - 320px) / 768));
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+
   .pagination_news {
     width: calc(100vw - 30px);
     >* {

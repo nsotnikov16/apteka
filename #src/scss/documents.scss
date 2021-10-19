@@ -121,15 +121,44 @@
     &__absolute_wide {
         width: 1190px;
     }
-
-    
 }
 
 .documents__document.requisites {
-
     margin-top: 46px;
 
     .documents__current-title {
         max-width: 372px;
+    }
+}
+
+@media (max-width: 768px) {
+    .documents {
+        margin-bottom: 60px;
+        width: calc(100vw - 30px);
+        &__document {
+            max-width: none;
+            /* width: calc(100vw - 30px); */
+        }
+
+        &__img {
+            min-height: 70px;
+            margin-right: 8px;
+        }
+
+        &__current-title {
+            font-size: 13px;
+            line-height: 16px;
+            width: auto;
+        }
+
+        &__size {
+            font-size: 10px;
+        }
+
+        &__click {
+            p {
+                font-size: 12px;
+            }
+        }
     }
 }

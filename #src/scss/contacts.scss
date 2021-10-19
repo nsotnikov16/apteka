@@ -292,3 +292,74 @@
     max-width: 780px;
   }
 }
+
+
+@media(max-width: 768px) {
+  .contacts {
+    width: calc(100vw - 30px);
+    &__departament {
+      flex-direction: column;
+    }
+
+    &__departament-title {
+      margin-bottom: 13px;
+    }
+
+    &__post {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    &__post-title {
+      max-width: none;
+      flex-basis: 50%;
+    }
+
+    &__fio {
+      flex-basis: 50%;
+      margin-right: 0;
+      margin-bottom: 27px;
+    }
+
+    &__contacts {
+      margin-left: 50%;
+    }
+
+    &__numbers, &__emails {
+      ul {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__posts.organization-card {
+
+      .contacts__post {
+        flex-direction: column;
+      }
+      
+      .contacts__post-title {
+        margin-bottom: 4px;
+      }
+
+      .contacts__fio {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 468px) {
+  .contacts {
+    /* &__post-title {
+      flex-basis: 30%;
+    }
+
+    &__fio {
+      flex-basis: 70%;
+    }
+
+    &__contacts {
+      margin-left: 30%;
+    } */
+  }
+}

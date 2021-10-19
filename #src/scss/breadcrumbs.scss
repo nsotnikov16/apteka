@@ -4,7 +4,8 @@
     &.breadcrumbs_white {
         .breadcrumbs__link {
             color: #051945;
-            &::after, &::before{
+            &::after,
+            &::before {
                 background: rgba(5, 25, 69, 0.5);
             }
         }
@@ -12,8 +13,12 @@
         .breadcrumbs__current {
             color: rgba(5, 25, 69, 0.5);
         }
+    }
 
-        
+    &__link,
+    &__current {
+        font-size: 13px;
+        line-height: 16px;
     }
 
     &__list {
@@ -22,7 +27,7 @@
         list-style: none;
         width: 100%;
         white-space: nowrap;
-        /* overflow: auto; */
+        overflow: auto;
     }
 
     &__link {

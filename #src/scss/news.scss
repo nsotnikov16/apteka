@@ -307,6 +307,10 @@
     }
   }
 
+  .main__grid .news {
+    padding-bottom: 0;
+  }
+
   .tabs .news {
     padding-top: 30px;
   }
@@ -321,7 +325,16 @@
       grid-template-columns: 1fr;
     }
 
-    
+    &__detail {
+      width: calc(100vw - 30px);
+
+      .news__detail-photo img {
+        width: calc(100vw - 30px);
+        object-fit: cover;
+        object-position: center center;
+        min-height: 267px;
+      }
+    }
 
     &__block {
       flex-direction: column;

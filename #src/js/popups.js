@@ -39,7 +39,6 @@ if(popups.length > 0) {
         }
 
         function handleOverlayClick(evt) {
-            console.log(evt.target)
             if (evt.target === evt.currentTarget) {
                 close();
             }

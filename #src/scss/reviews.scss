@@ -103,6 +103,7 @@
 
     textarea {
         resize: none;
+        min-height: 180px;
     }
 
     .select {
@@ -148,6 +149,31 @@
         // .select__label
 
         &__label {
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .reviews {
+        margin-bottom: 50px;
+
+        &__row {
+            flex-direction: column;
+
+        }
+
+        &__label {
+            margin-bottom: 6px;
+        }
+
+        &__form {
+            padding: 37px 15px 42px;
+        }
+        
+        &__title {
+            font-size: 22px;
         }
     }
 }

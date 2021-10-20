@@ -96,8 +96,16 @@ if(window.innerWidth <= 768) {
 } 
 
 $(window).resize(function () {
-    if(window.innerWidth <= 768) {
-        $('.footer__down-right').append($('.copyright'))
-    } 
+    window.innerWidth <= 768 ? $('.footer__down-right').append($('.copyright')) : $('.footer__down-left').append($('.copyright'))
 })
 
+// скролл
+
+$(function(){
+
+$('.target__info-bb').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#map').offset().top }, 1000);
+    e.preventDefault();
+});
+
+});

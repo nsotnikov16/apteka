@@ -117,9 +117,13 @@ input {
 }
 .burger:after{
     bottom: 0px;
+    transform: rotate(-0deg);
+    transition: transform 0.5s ease;
 }
 .burger:before{
     top: 9px;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease;
 }
 
 .burger_open span {
@@ -129,11 +133,13 @@ input {
 .burger_open:before {
     top: 17px;
     transform: rotate(45deg);
+    transition: transform 0.5s ease;
 }
 
 .burger_open:after {
     bottom: 15px;
     transform: rotate(-45deg);
+    transition: transform 0.5s ease;
 }
 
 .menu {
@@ -447,11 +453,12 @@ input {
         display: block;
         border: none;
         box-shadow: none;
+        padding-top: 0;
     }
 
     .menu_open .menu__item-dropdown.open .menu__expand {
         position: static;
-        padding: 7px 0 0;
+        padding: 0;
     }
 
     .menu {
@@ -470,6 +477,7 @@ input {
 
     .menu_open .menu__dropdown-link {
         display: block;
+        font-size: 1.2em;
     }
 
     

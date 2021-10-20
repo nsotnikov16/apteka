@@ -38,6 +38,7 @@
 
         iframe {
             border-radius: 5px;
+            width: 100%;
         }
     }
 
@@ -68,7 +69,8 @@
     // .media__photo-current
 
     &__photo-current {
-        max-width: 272px;
+        /* max-width: 272px; */
+        width: 100%;
         border-radius: 3px;
         &:hover {
             cursor: pointer;
@@ -118,6 +120,27 @@
     }
 }
 
+@media (max-width: 1080px) {
+    .media {
+        margin-bottom: 0;
+        &__video-gallery {
+            gap: 35px 25px;
+            iframe {
+                width: 100%;
+            }
+        }
+
+        &__photo-gallery {
+            grid-template-columns: 1fr 1fr;
+            
+        }
+
+        &__photo-current {
+            max-width: none;
+            width: 100%;
+        }
+    }
+}
 
 @media (max-width: 768px) {
     .media {

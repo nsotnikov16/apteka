@@ -156,6 +156,7 @@ h3.title {
 
 .pagination {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 77px;
   &__prev {
@@ -240,6 +241,8 @@ h3.title {
 
 @media (max-width: 1079px) {
   .main__grid {
+
+    
     .container {
       grid-template-columns: 1fr;
     }
@@ -250,6 +253,10 @@ h3.title {
     .sidebar {
       margin-bottom: 50px;
     }
+  }
+
+  .main__grid .main__grid-left {
+    margin-right: 0;
   }
 }
 

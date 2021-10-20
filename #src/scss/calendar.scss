@@ -4,7 +4,7 @@
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  width: 220px;
+  
 }
 #calendar2 thead tr:last-child {
   font-size: small;
@@ -79,6 +79,7 @@
       overflow: visible;
       opacity: 1;
       transition: visibility 0.15s linear, opacity 0.15s linear;
+      width: 100%;
     }
   }
 

@@ -1,3 +1,4 @@
+// Если загрузка фото через бэк, тогда удалить
 const photos = document.querySelectorAll('.media__photo')
 
 if(photos.length > 0) {
@@ -38,3 +39,5 @@ if(photos.length > 0) {
         
     })
 }
+
+// -----------------------------------------------

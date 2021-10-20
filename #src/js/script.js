@@ -52,7 +52,12 @@ const inputSearch = document.querySelector('.header__search.search input')
 const searchClose = document.querySelector('.header__search .search__close')
 const formSearch = document.querySelector('.header__search.search')
 
-inputSearch.addEventListener('input', (evt) => evt.target.value ? evt.target.parentNode.classList.add('input-value') : evt.target.parentNode.classList.remove('input-value'))
+inputSearch.addEventListener('input', (evt) => {
+    const headerDown = document.querySelector('.header .header__down')
+    evt.target.value ? evt.target.parentNode.classList.add('input-value') : evt.target.parentNode.classList.remove('input-value')
+    /* evt.target.value && evt.target.closest('.header__down') ? headerDown.classList.add('input-value') : headerDown.classList.remove('input-value') */
+})
+
 searchClose.addEventListener('click', () => {
     formSearch.classList.remove('open')
     formSearch.reset();

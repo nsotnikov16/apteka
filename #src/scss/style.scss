@@ -135,7 +135,8 @@ h3.title {
 .main__grid {
   .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    /* grid-template-columns: 2fr 1fr; */
+    /* grid-template-columns: 70% 30%; */
   }
 
   .main__grid-left {
@@ -217,7 +218,46 @@ h3.title {
   background-color: #fff;
 }
 
+
+@media (min-width: 1080px) {
+  .main__grid {
+    .container {
+      grid-template-columns: 70% 30%;
+    }
+
+    &-right {
+      margin-left: 20%;
+    }
+    .tabs {
+      width: auto;
+    }
+
+    .calendar {
+      max-width:100%;
+    }
+  }
+}
+
+@media (max-width: 1079px) {
+  .main__grid {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .tabs {
+      width: auto;
+    }
+    .sidebar {
+      margin-bottom: 50px;
+    }
+  }
+}
+
+
 @media (max-width: 768px) {
+  .mb320 {
+    margin-bottom: 300px;
+  }
   .review-btn {
   }
 

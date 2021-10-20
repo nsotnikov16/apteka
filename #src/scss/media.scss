@@ -118,6 +118,7 @@
     }
 }
 
+
 @media (max-width: 768px) {
     .media {
         width: calc(100vw - 30px);
@@ -133,6 +134,7 @@
             iframe {
                 height: calc(194px + (156 + 156 * 0.7) * ((100vw - 320px) / 768));
                 width: calc(100vw - 30px);
+                max-width: none;
             }
         }
 

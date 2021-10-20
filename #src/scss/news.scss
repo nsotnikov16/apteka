@@ -98,6 +98,13 @@
       font-size: 18px;
       line-height: 26px;
       color: #051945;
+      overflow: hidden;
+        max-height: 5.6em;
+        position: relative;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
     }
 
     .news__item-text {
@@ -265,7 +272,7 @@
   }
 }
 
-.yandex-news {
+.news__item .yandex-news {
   background: #ffcc00;
   border-radius: 3px;
   font-size: 10px;
@@ -378,6 +385,7 @@
       max-width: 95%;
       h3 {
         max-width: 90%;
+        
       }
     }
   }

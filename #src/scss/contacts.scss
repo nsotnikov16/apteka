@@ -171,6 +171,7 @@
     background: #084a7a;
     padding: 41px 50px 26px 40px;
     margin-bottom: 33px;
+    margin-top: 41px;
 
     .map-info__row {
       margin-bottom: 3px;
@@ -293,8 +294,7 @@
   }
 }
 
-
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .contacts {
     width: calc(100vw - 30px);
     &__departament {
@@ -325,18 +325,61 @@
       margin-left: 50%;
     }
 
-    &__numbers, &__emails {
+    &__numbers,
+    &__emails {
       ul {
         grid-template-columns: 1fr;
       }
     }
 
-    &__posts.organization-card {
+    &__pharmacies-adress {
+      grid-template-columns: 1fr;
 
+      .contacts__left {
+        grid-row: 2/3;
+        
+      }
+    }
+
+    &__pharmacies-block {
+      max-height: 600px;
+      overflow: auto;
+      margin-top: 41px;
+
+      .pharmacies__city {
+        margin-top: 0;
+      }
+    }
+
+
+    &__office {
+      padding: 41px 20px 26px 25px;
+    }
+
+    &__office-title {
+      font-size: 25px;
+    }
+
+    &__office-phone {
+      p {
+        font-size: 11px;
+      }
+      a {
+        h3 {
+          font-size: 22px;
+        }
+      }
+    }
+
+    &__cities {
+      margin-left: 0;
+    }
+
+    &__posts.organization-card {
       .contacts__post {
         flex-direction: column;
       }
-      
+
       .contacts__post-title {
         margin-bottom: 4px;
       }

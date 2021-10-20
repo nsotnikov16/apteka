@@ -145,7 +145,8 @@ h3.title {
 
 .main__grid .container {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  /* grid-template-columns: 2fr 1fr; */
+  /* grid-template-columns: 70% 30%; */
 }
 
 .main__grid .main__grid-left {
@@ -746,6 +747,8 @@ input {
 }
 
 .input-value {
+  border-top: 0;
+  botder-bottom: 0;
   border: 1px solid #0A3FB4;
 }
 
@@ -1322,6 +1325,14 @@ input {
   font-size: 18px;
   line-height: 26px;
   color: #051945;
+  overflow: hidden;
+  max-height: 5.6em;
+  position: relative;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
 }
 
 .news__item .news__item-text {
@@ -1510,7 +1521,7 @@ input {
   padding-bottom: 14px;
 }
 
-.yandex-news {
+.news__item .yandex-news {
   background: #ffcc00;
   border-radius: 3px;
   font-size: 10px;
@@ -1521,7 +1532,7 @@ input {
   padding: 2px 6px;
 }
 
-.yandex-news span {
+.news__item .yandex-news span {
   color: #ee2c2c;
 }
 
@@ -2461,7 +2472,7 @@ input {
 .sidebar.sidebar_news,
 .sidebar.sidebar_documents {
   margin-top: 0;
-  margin-left: 20%;
+  /* margin-left: 20%; */
 }
 
 .sidebar.sidebar_documents {
@@ -3113,6 +3124,7 @@ input {
   background: #084a7a;
   padding: 41px 50px 26px 40px;
   margin-bottom: 33px;
+  margin-top: 41px;
 }
 
 .contacts__office .map-info__row {
@@ -3236,6 +3248,24 @@ input {
 @media screen and (min-width: 768px) {
   .breadcrumbs {
     padding: 30px 0 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .main__grid .container {
+    grid-template-columns: 70% 30%;
+  }
+
+  .main__grid-right {
+    margin-left: 20%;
+  }
+
+  .main__grid .tabs {
+    width: auto;
+  }
+
+  .main__grid .calendar {
+    max-width: 100%;
   }
 }
 
@@ -3405,6 +3435,20 @@ input {
   }
 }
 
+@media (max-width: 1079px) {
+  .main__grid .container {
+    grid-template-columns: 1fr;
+  }
+
+  .main__grid .tabs {
+    width: auto;
+  }
+
+  .main__grid .sidebar {
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 800px) {
   .popup__image {
     width: 60vw;
@@ -3412,6 +3456,10 @@ input {
 }
 
 @media (max-width: 768px) {
+  .mb320 {
+    margin-bottom: 300px;
+  }
+
   .main__grid .container {
     grid-template-columns: 1fr;
   }
@@ -3883,8 +3931,16 @@ input {
   }
 
   .pharmacies__text h3 {
-    font-size: 12px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .calendar {
+    max-width: calc(100vw - 30px);
+  }
+
+  #calendar2 {
+    width: calc(100vw - 65px);
   }
 
   .tabs__controls {
@@ -3982,6 +4038,7 @@ input {
   .media__video-gallery iframe {
     height: calc(194px + 265.2 * (100vw - 320px) / 768);
     width: calc(100vw - 30px);
+    max-width: none;
   }
 
   .media__video-title {
@@ -4042,6 +4099,44 @@ input {
   .contacts__numbers ul,
   .contacts__emails ul {
     grid-template-columns: 1fr;
+  }
+
+  .contacts__pharmacies-adress {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__pharmacies-adress .contacts__left {
+    grid-row: 2/3;
+  }
+
+  .contacts__pharmacies-block {
+    max-height: 600px;
+    overflow: auto;
+    margin-top: 41px;
+  }
+
+  .contacts__pharmacies-block .pharmacies__city {
+    margin-top: 0;
+  }
+
+  .contacts__office {
+    padding: 41px 20px 26px 25px;
+  }
+
+  .contacts__office-title {
+    font-size: 25px;
+  }
+
+  .contacts__office-phone p {
+    font-size: 11px;
+  }
+
+  .contacts__office-phone a h3 {
+    font-size: 22px;
+  }
+
+  .contacts__cities {
+    margin-left: 0;
   }
 
   .contacts__posts.organization-card .contacts__post {

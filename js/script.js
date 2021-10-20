@@ -381,6 +381,7 @@ if(popups.length > 0) {
 };
 
 /* Загрузить все фото */
+// Если загрузка фото через бэк, тогда удалить
 const photos = document.querySelectorAll('.media__photo')
 
 if(photos.length > 0) {
@@ -421,6 +422,8 @@ if(photos.length > 0) {
         
     })
 }
+
+// -----------------------------------------------
 
 // Двухуровневое меню
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')
@@ -499,8 +502,16 @@ if(window.innerWidth <= 768) {
 } 
 
 $(window).resize(function () {
-    if(window.innerWidth <= 768) {
-        $('.footer__down-right').append($('.copyright'))
-    } 
+    window.innerWidth <= 768 ? $('.footer__down-right').append($('.copyright')) : $('.footer__down-left').append($('.copyright'))
 })
 
+// скролл
+
+$(function(){
+
+$('.target__info-bb').on('click', function(e){
+    $('html,body').stop().animate({ scrollTop: $('#map').offset().top }, 1000);
+    e.preventDefault();
+});
+
+});

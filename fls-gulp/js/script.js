@@ -159,6 +159,9 @@ if (calendars.length > 0) {
     calendarBtn.addEventListener("click", () =>
       calendarExpand.classList.toggle("open")
     );
+
+    document.addEventListener('click', ({target}) => !target.closest('.calendar') ? calendarExpand.classList.remove("open") : '')
+
     function Calendar2(id, year, month) {
       var Dlast = new Date(year, month + 1, 0).getDate(),
         D = new Date(year, month, Dlast),
@@ -285,6 +288,10 @@ if (calendars.length > 0) {
     });
     //
   });
+
+  
+
+
 }
 ;
 
@@ -432,9 +439,10 @@ twoLevelMenus.forEach((item, ind, arr) => {
         item.classList.contains('open') ? item.classList.remove('open') : item.classList.add('open')
         arr.forEach(el => el !== item ? el.classList.remove('open') : "")
     })
+    
 })
 
-
+document.addEventListener('click', ({target}) => !target.closest('.menu__item-dropdown') ? twoLevelMenus.forEach(item => item.classList.remove('open')) : '')
 // Меню модалка
 const menuBtn = document.querySelector('.burger')
 const menu = document.querySelector('.menu')
@@ -487,15 +495,7 @@ const searchMin = () => {appendSearch(); logicSearch(); functional()}
 
 window.innerWidth <= 1200 ? searchMin() : functional()
 
-//document.addEventListener('click', (evt) => (evt.target !== formSearch) && (!formSearch.classList.contains('open')) ? formSearch.classList.remove('open') : '')
-
-//Календарь
-/* let date = new Date()
-console.log(date)
-console.log(date.getFullYear())
-console.log(date.getMonth() + 1)
-console.log(date.getDate()) */
-
+document.addEventListener('click', ({target}) => !target.closest('.header__down') ? formSearch.classList.remove('open') : '')
 
 if(window.innerWidth <= 768) {
     $('.footer__down-right').append($('.copyright'))

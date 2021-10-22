@@ -16,7 +16,13 @@ var swiperMain = new Swiper('.main-swiper .swiper', {
       320: {
         slidesPerView: 2,
       },
+      480: {
+        slidesPerView: 3,
+      },
       768: {
+        slidesPerView: 4,
+      },
+      960: {
         slidesPerView: 5,
       }
     },

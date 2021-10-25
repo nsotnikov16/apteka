@@ -542,17 +542,47 @@ if(photos.length > 0) {
 
 // -----------------------------------------------
 
+
 // Двухуровневое меню
+
 const twoLevelMenus = document.querySelectorAll('.menu__item-dropdown')
-twoLevelMenus.forEach((item, ind, arr) => {
-    item.querySelector('.menu__link').addEventListener('click', () => {
-        item.classList.contains('open') ? item.classList.remove('open') : item.classList.add('open')
-        arr.forEach(el => el !== item ? el.classList.remove('open') : "")
+
+function openMenuMaxWidth1200 () {
+    twoLevelMenus.forEach((item, ind, arr) => {
+
+        const linkMain = item.querySelector('.menu__link')
+
+        linkMain.addEventListener('click', (e) => e.preventDefault())
+
+        item.querySelector('.menu__link').addEventListener('click', () => {
+            item.classList.contains('open') ? item.classList.remove('open') : item.classList.add('open')
+            arr.forEach(el => el !== item ? el.classList.remove('open') : "")
+        })
     })
-    
+}
+
+function openMenuMinWidth1200 () {
+    twoLevelMenus.forEach((item, ind, arr) => {
+
+        const linkMain = item.querySelector('.menu__link')
+
+        linkMain.removeEventListener('click', (e) => e.preventDefault())
+
+        item.querySelector('.menu__link').removeEventListener('click', () => {
+            item.classList.contains('open') ? item.classList.remove('open') : item.classList.add('open')
+            arr.forEach(el => el !== item ? el.classList.remove('open') : "")
+        })
+    })
+}
+
+window.innerWidth <= 1200 ? openMenuMaxWidth1200() : openMenuMinWidth1200()
+$(window).resize(function () {
+    window.innerWidth <= 1200 ? openMenuMaxWidth1200() : openMenuMinWidth1200()
 })
 
-document.addEventListener('click', ({target}) => !target.closest('.menu__item-dropdown') ? twoLevelMenus.forEach(item => item.classList.remove('open')) : '')
+
+
+/* document.addEventListener('click', ({target}) => !target.closest('.menu__item-dropdown') ? twoLevelMenus.forEach(item => item.classList.remove('open')) : '') */
 // Меню модалка
 const menuBtn = document.querySelector('.burger')
 const menu = document.querySelector('.menu')

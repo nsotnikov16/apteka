@@ -15,25 +15,25 @@
         letter-spacing: 0.03em;
         font-weight: 600;
         opacity: 0.75;
+        
     }
 
     &__title {
         font-weight: 600;
         font-size: 48px;
         line-height: 60px;
-        padding: 0 0 2.063em;
-        max-width: 89.42%;
-        white-space: pre-line;
-       /*  position: relative;
-        &::before {
-            content: '\2033';
-            position: absolute;
-            left: -10%;
+        margin: 0 0 2.063em;
+        max-width: 84.42%;
+        position: relative;
+        span {
+            color: #1FC18F;
+            &:first-child {
+                content: '';
+                position: absolute;
+                left: -3.5%;
+                top: 0;
+            }
         }
-        &::after {
-            content: '\2033';
-            position: absolute;
-        } */
     };
 
 
@@ -97,17 +97,24 @@
     .banner {
         &__main {
             padding: 6.000em 0 3.938em;
+            margin-left: 15px;
         }
 
         &__top {
-            font-size: calc(9.8px + (7 + 7 * 0.7) * ((100vw - 320px) / 768));
+            font-size: calc(9.2px + (7 + 7 * 0.7) * ((100vw - 320px) / 768));
             line-height: calc(20px + (38 + 38 * 0.7) * ((100vw - 320px) / 768));
         }
 
         &__title {
-            font-size: calc(21px + (22 + 22 * 0.7) * ((100vw - 320px) / 768));
+            font-size: calc(20px + (22 + 22 * 0.7) * ((100vw - 320px) / 768));
             line-height: calc(30px + (25 + 25 * 0.7) * ((100vw - 320px) / 768));
             max-width: 100%;
+            white-space: normal;
+            span {
+                &:first-child {
+                    left: -4%;
+                }
+            }
         }
 
         &__down {

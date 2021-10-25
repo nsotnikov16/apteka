@@ -179,11 +179,11 @@ function init() {
       searchControlProvider: "yandex#search",
     }
   )
+
+  if(contactsMap) {
+    contactsMap.controls.add('zoomControl', {position: {
+      left: 7, top: 10
+    }})
+  }
     
-  contactsMap.controls.add('zoomControl', {position: {
-    left: 7, top: 10
-  }})
-  
-        
-      
 }

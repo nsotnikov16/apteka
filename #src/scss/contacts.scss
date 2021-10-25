@@ -146,8 +146,8 @@
 
   &__pharmacies-adress {
     display: grid;
-    grid-template-columns: 2.1fr 1fr;
-    gap: 0 20px;
+    grid-template-columns: 65% 35%;
+    /* gap: 0 20px; */
   }
 
   .pharmacies__city {
@@ -167,6 +167,18 @@
   }
   // .contacts__office
 
+
+  &__map {
+    margin-top: 41px;
+    display: flex;
+    .contacts__office {
+      margin: 0;
+      .contacts__office-title {
+        font-size: 24px;
+      }
+    }
+  }
+
   &__office {
     background: #084a7a;
     padding: 41px 50px 26px 40px;
@@ -174,7 +186,7 @@
     margin-top: 41px;
 
     .map-info__row {
-      margin-bottom: 3px;
+      margin-bottom: 7px;
       p {
         font-size: 16px;
         line-height: 21px;
@@ -294,9 +306,16 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1098px) {
   .contacts {
-    width: calc(100vw - 30px);
+    width: calc(100vw - 60px);
+
+    
+
+    &__map {
+      flex-direction: column;
+    }
+
     &__departament {
       flex-direction: column;
     }
@@ -326,11 +345,11 @@
     }
 
     &__numbers,
-    &__emails {
+    /* &__emails {
       ul {
         grid-template-columns: 1fr;
       }
-    }
+    } */
 
     &__pharmacies-adress {
       grid-template-columns: 1fr;
@@ -386,6 +405,19 @@
 
       .contacts__fio {
         margin-bottom: 0;
+      }
+    }
+  }
+}
+
+
+@media(max-width: 768px) {
+  .contacts {
+    width: calc(100vw - 30px);
+
+    &__emails {
+      ul {
+        grid-template-columns: 1fr;
       }
     }
   }

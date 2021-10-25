@@ -3144,8 +3144,8 @@ input {
 
 .contacts__pharmacies-adress {
   display: grid;
-  grid-template-columns: 2.1fr 1fr;
-  gap: 0 20px;
+  grid-template-columns: 65% 35%;
+  /* gap: 0 20px; */
 }
 
 .contacts .pharmacies__city {
@@ -3163,6 +3163,21 @@ input {
           justify-content: flex-start;
 }
 
+.contacts__map {
+  margin-top: 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contacts__map .contacts__office {
+  margin: 0;
+}
+
+.contacts__map .contacts__office .contacts__office-title {
+  font-size: 24px;
+}
+
 .contacts__office {
   background: #084a7a;
   padding: 41px 50px 26px 40px;
@@ -3171,7 +3186,7 @@ input {
 }
 
 .contacts__office .map-info__row {
-  margin-bottom: 3px;
+  margin-bottom: 7px;
 }
 
 .contacts__office .map-info__row p {
@@ -3510,6 +3525,110 @@ input {
   }
 }
 
+@media (max-width: 1098px) {
+  .contacts {
+    width: calc(100vw - 60px);
+  }
+
+  .contacts__map {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts__departament {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts__departament-title {
+    margin-bottom: 13px;
+  }
+
+  .contacts__post {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .contacts__post-title {
+    max-width: none;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+
+  .contacts__fio {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-right: 0;
+    margin-bottom: 27px;
+  }
+
+  .contacts__contacts {
+    margin-left: 50%;
+  }
+
+  .contacts__numbers,
+  .contacts__pharmacies-adress {
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__numbers .contacts__left,
+  .contacts__pharmacies-adress .contacts__left {
+    grid-row: 2/3;
+  }
+
+  .contacts__pharmacies-block {
+    max-height: 600px;
+    overflow: auto;
+    margin-top: 41px;
+  }
+
+  .contacts__pharmacies-block .pharmacies__city {
+    margin-top: 0;
+  }
+
+  .contacts__office {
+    padding: 41px 20px 26px 25px;
+  }
+
+  .contacts__office-title {
+    font-size: 25px;
+  }
+
+  .contacts__office-phone p {
+    font-size: 11px;
+  }
+
+  .contacts__office-phone a h3 {
+    font-size: 22px;
+  }
+
+  .contacts__cities {
+    margin-left: 0;
+  }
+
+  .contacts__posts.organization-card .contacts__post {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .contacts__posts.organization-card .contacts__post-title {
+    margin-bottom: 4px;
+  }
+
+  .contacts__posts.organization-card .contacts__fio {
+    margin-bottom: 0;
+  }
+}
+
 @media (max-width: 1080px) {
   .choose-city .container {
     grid-template-columns: 1fr;
@@ -3544,7 +3663,8 @@ input {
 
   .tabs__controls {
     max-width: 100vw;
-    overflow-x: auto;
+    overflow: auto;
+    overflow-y: hidden;
   }
 
   .tabs__controls label {
@@ -4171,98 +4291,8 @@ input {
     width: calc(100vw - 30px);
   }
 
-  .contacts__departament {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .contacts__departament-title {
-    margin-bottom: 13px;
-  }
-
-  .contacts__post {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-
-  .contacts__post-title {
-    max-width: none;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-  }
-
-  .contacts__fio {
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
-    margin-right: 0;
-    margin-bottom: 27px;
-  }
-
-  .contacts__contacts {
-    margin-left: 50%;
-  }
-
-  .contacts__numbers ul,
   .contacts__emails ul {
     grid-template-columns: 1fr;
-  }
-
-  .contacts__pharmacies-adress {
-    grid-template-columns: 1fr;
-  }
-
-  .contacts__pharmacies-adress .contacts__left {
-    grid-row: 2/3;
-  }
-
-  .contacts__pharmacies-block {
-    max-height: 600px;
-    overflow: auto;
-    margin-top: 41px;
-  }
-
-  .contacts__pharmacies-block .pharmacies__city {
-    margin-top: 0;
-  }
-
-  .contacts__office {
-    padding: 41px 20px 26px 25px;
-  }
-
-  .contacts__office-title {
-    font-size: 25px;
-  }
-
-  .contacts__office-phone p {
-    font-size: 11px;
-  }
-
-  .contacts__office-phone a h3 {
-    font-size: 22px;
-  }
-
-  .contacts__cities {
-    margin-left: 0;
-  }
-
-  .contacts__posts.organization-card .contacts__post {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-
-  .contacts__posts.organization-card .contacts__post-title {
-    margin-bottom: 4px;
-  }
-
-  .contacts__posts.organization-card .contacts__fio {
-    margin-bottom: 0;
   }
 }
 

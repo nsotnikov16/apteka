@@ -58,10 +58,9 @@ var swiperMain = new Swiper('.main-swiper .swiper', {
 ymaps.ready(init);
 
 const adressPharmacies = [
-
   {
     iconContent: "1",
-    coordinates: [61.238666, 73.436870],
+    coordinates: [61.238666, 73.43687],
     adress: "ХМАО-Югры, Сургут, ул. Комсомольский 14/1",
     extension: "604",
   },
@@ -97,7 +96,7 @@ const adressPharmacies = [
   },
   {
     iconContent: "7",
-    coordinates: [60.754334, 72.855220],
+    coordinates: [60.754334, 72.85522],
     adress: "ХМАО-Югры, Пыть-Ях, ул. 2 мкр Сибирская 2а",
     extension: "72",
   },
@@ -110,7 +109,7 @@ const adressPharmacies = [
   },
   {
     iconContent: "9",
-    coordinates: [63.935767, 65.049920],
+    coordinates: [63.935767, 65.04992],
     adress: "ХМАО-Югры, Сургутский район, пгт Березово, ул. Чкалова 47/3",
     extension: "73",
   },
@@ -122,13 +121,13 @@ const adressPharmacies = [
   },
   {
     iconContent: "11",
-    coordinates: [63.192090, 64.424603],
+    coordinates: [63.19209, 64.424603],
     adress: "ХМАО-Югры, Сургутский район, пгт Игрим, ул. Транспортная 26",
     extension: "77",
   },
   {
     iconContent: "12",
-    coordinates: [62.865917, 61.639260],
+    coordinates: [62.865917, 61.63926],
     adress: "ХМАО-Югры, Березовский район, село Хулимсунт, 4 мкр дом 46",
     extension: "80",
   },
@@ -206,20 +205,44 @@ function init() {
 
       myMap.geoObjects.add(myPlacemarkWithContent);
 
-      myPlacemarkWithContent.events.add(['balloonopen'], function(e) {
+      myPlacemarkWithContent.events.add(["balloonopen"], function (e) {
         e.get("target").options.set({
           iconImageHref: "img/icons/icon-map_active.svg",
         });
-      })
+      });
 
-      myPlacemarkWithContent.events.add(['balloonclose'], function(e) {
+      myPlacemarkWithContent.events.add(["balloonclose"], function (e) {
         e.get("target").options.set({
           iconImageHref: "img/icons/icon-map.svg",
         });
-      })
-
+      });
     }
   );
+
+  var contactsMap = new ymaps.Map(
+    "contacts-map",
+    {
+      // Координаты центра карты.
+      // Порядок по умолчанию: «широта, долгота».
+      // Чтобы не определять координаты центра карты вручную,
+      // воспользуйтесь инструментом Определение координат.
+      center: [61.260758, 73.252958],
+      // Уровень масштабирования. Допустимые значения:
+      // от 0 (весь мир) до 19.
+      zoom: 17,
+      controls: []
+    },
+    {
+      searchControlProvider: "yandex#search",
+    }
+  )
+    
+  contactsMap.controls.add('zoomControl', {position: {
+    left: 7, top: 10
+  }})
+  
+        
+      
 }
 ;
 

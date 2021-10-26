@@ -996,6 +996,11 @@ input {
   width: 120%;
 }
 
+.menu__dropdown-link {
+  display: block;
+  width: 100%;
+}
+
 .menu__dropdown.flex-column {
   -webkit-box-align: start;
       -ms-flex-align: start;
